@@ -1,5 +1,13 @@
 NotForProfit::Application.routes.draw do
 
+  resources :binholdings
+
+
+  resources :bins
+
+
+  resources :stockcodes
+
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 

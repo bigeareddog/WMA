@@ -1,0 +1,31 @@
+<h1>Listing bins</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Location</th>
+    <th>Isle</th>
+    <th>Shelf</th>
+    <th>Status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bins.each do |bin| %>
+  <tr>
+    <td><%= bin.description %></td>
+    <td><%= bin.location %></td>
+    <td><%= bin.isle %></td>
+    <td><%= bin.shelf %></td>
+    <td><%= bin.status %></td>
+    <td><%= link_to 'Show', bin %></td>
+    <td><%= link_to 'Edit', edit_bin_path(bin) %></td>
+    <td><%= link_to 'Destroy', bin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bin', new_bin_path %>

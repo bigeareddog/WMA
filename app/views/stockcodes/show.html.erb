@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Description:</b>
+  <%= @stockcode.description %>
+</p>
+
+<p>
+  <b>Stock class:</b>
+  <%= @stockcode.stock_class %>
+</p>
+
+<p>
+  <b>Stock type:</b>
+  <%= @stockcode.stock_type %>
+</p>
+
+<p>
+  <b>Unit of issue:</b>
+  <%= @stockcode.unit_of_issue %>
+</p>
+
+<p>
+  <b>Dimension:</b>
+  <%= @stockcode.dimension %>
+</p>
+
+<p>
+  <b>Volume:</b>
+  <%= @stockcode.volume %>
+</p>
+
+<p>
+  <b>Part:</b>
+  <%= @stockcode.part_id %>
+</p>
+
+<p>
+  <b>Vendor:</b>
+  <%= @stockcode.vendor %>
+</p>
+
+
+<%= link_to 'Edit', edit_stockcode_path(@stockcode) %> |
+<%= link_to 'Back', stockcodes_path %>

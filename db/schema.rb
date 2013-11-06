@@ -11,7 +11,42 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121105233718) do
+ActiveRecord::Schema.define(:version => 20131012064757) do
+
+  create_table "binholdings", :force => true do |t|
+    t.string   "description"
+    t.integer  "stockcode_id"
+    t.integer  "min_qty"
+    t.integer  "max_qty"
+    t.integer  "actual_qty"
+    t.date     "last_count_date"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "bin_id"
+  end
+
+  create_table "bins", :force => true do |t|
+    t.string   "description"
+    t.integer  "location"
+    t.integer  "isle"
+    t.integer  "shelf"
+    t.string   "status"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "stockcodes", :force => true do |t|
+    t.string   "description",   :null => false
+    t.string   "stock_class"
+    t.string   "stock_type"
+    t.string   "unit_of_issue", :null => false
+    t.string   "dimension"
+    t.string   "volume"
+    t.string   "part_id",       :null => false
+    t.string   "vendor",        :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

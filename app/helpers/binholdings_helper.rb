@@ -1,0 +1,2 @@
+module BinholdingsHelper
+end

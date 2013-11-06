@@ -1,0 +1,33 @@
+<h1>Listing binholdings</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Stockcode</th>
+    <th>Min qty</th>
+    <th>Max qty</th>
+    <th>Actual qty</th>
+    <th>Last count date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @binholdings.each do |binholding| %>
+  <tr>
+    <td><%= binholding.description %></td>
+    <td><%= binholding.stockcode_id %></td>
+    <td><%= binholding.min_qty %></td>
+    <td><%= binholding.max_qty %></td>
+    <td><%= binholding.actual_qty %></td>
+    <td><%= binholding.last_count_date %></td>
+    <td><%= link_to 'Show', binholding %></td>
+    <td><%= link_to 'Edit', edit_binholding_path(binholding) %></td>
+    <td><%= link_to 'Destroy', binholding, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Binholding', new_binholding_path %>

@@ -1,0 +1,41 @@
+<div>
+	<%= link_to image_tag("StockCode.png", alt: "Rails"), '' %>
+	<h1>Search Stockcodes</h1>
+</div>
+
+<%= link_to 'New Stockcode', new_stockcode_path %>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Stock class</th>
+    <th>Stock type</th>
+    <th>Unit of issue</th>
+    <th>Dimension</th>
+    <th>Volume</th>
+    <th>Part</th>
+    <th>Vendor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @stockcodes.each do |stockcode| %>
+  <tr>
+    <td><%= stockcode.description %></td>
+    <td><%= stockcode.stock_class %></td>
+    <td><%= stockcode.stock_type %></td>
+    <td><%= stockcode.unit_of_issue %></td>
+    <td><%= stockcode.dimension %></td>
+    <td><%= stockcode.volume %></td>
+    <td><%= stockcode.part_id %></td>
+    <td><%= stockcode.vendor %></td>
+    <td><%= link_to 'Show', stockcode %></td>
+    <td><%= link_to 'Edit', edit_stockcode_path(stockcode) %></td>
+    <td><%= link_to 'Destroy', stockcode, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

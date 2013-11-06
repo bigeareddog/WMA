@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Description:</b>
+  <%= @binholding.description %>
+</p>
+
+<p>
+  <b>Stockcode:</b>
+  <%= @binholding.stockcode_id %>
+</p>
+
+<p>
+  <b>Min qty:</b>
+  <%= @binholding.min_qty %>
+</p>
+
+<p>
+  <b>Max qty:</b>
+  <%= @binholding.max_qty %>
+</p>
+
+<p>
+  <b>Actual qty:</b>
+  <%= @binholding.actual_qty %>
+</p>
+
+<p>
+  <b>Last count date:</b>
+  <%= @binholding.last_count_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_binholding_path(@binholding) %> |
+<%= link_to 'Back', binholdings_path %>

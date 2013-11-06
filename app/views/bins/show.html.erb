@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Description:</b>
+  <%= @bin.description %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @bin.location %>
+</p>
+
+<p>
+  <b>Isle:</b>
+  <%= @bin.isle %>
+</p>
+
+<p>
+  <b>Shelf:</b>
+  <%= @bin.shelf %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @bin.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_bin_path(@bin) %> |
+<%= link_to 'Back', bins_path %>

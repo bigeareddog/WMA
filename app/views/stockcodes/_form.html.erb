@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="span6 offset3">
+
+	<%= form_for(@stockcode) do |f| %>
+	<% if @stockcode.errors.any? %>
+	<div id="error_explanation">
+		<h2><%= pluralize(@stockcode.errors.count, "error") %> prohibited this stockcode from being saved:</h2>
+
+		<ul>
+		<% @stockcode.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+		<% end %>
+		</ul>
+	</div>
+	<% end %>
+
+	<div class="field">
+	<%= f.label :description %><br />
+	<%= f.text_field :description %>
+	</div>
+	<div class="field">
+	<%= f.label :stock_class %><br />
+	<%= f.text_field :stock_class %>
+	</div>
+	<div class="field">
+	<%= f.label :stock_type %><br />
+	<%= f.text_field :stock_type %>
+	</div>
+	<div class="field">
+	<%= f.label :unit_of_issue %><br />
+	<%= f.text_field :unit_of_issue %>
+	</div>
+	<div class="field">
+	<%= f.label :dimension %><br />
+	<%= f.text_field :dimension %>
+	</div>
+	<div class="field">
+	<%= f.label :volume %><br />
+	<%= f.text_field :volume %>
+	</div>
+	<div class="field">
+	<%= f.label :part_id %><br />
+	<%= f.text_field :part_id %>
+	</div>
+	<div class="field">
+	<%= f.label :vendor %><br />
+	<%= f.text_field :vendor %>
+	</div>
+	<div class="actions">
+		
+        <%= f.submit "Create stock code", class: "btn btn-large btn-primary" %>
+	</div>
+	<% end %>
+</div>
+</div>

@@ -1,0 +1,33 @@
+<%= form_for(@bin) do |f| %>
+  <% if @bin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bin.errors.count, "error") %> prohibited this bin from being saved:</h2>
+
+      <ul>
+      <% @bin.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.number_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :isle %><br />
+    <%= f.number_field :isle %>
+  </div>
+  <div class="field">
+    <%= f.label :shelf %><br />
+    <%= f.number_field :shelf %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
