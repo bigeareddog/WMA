@@ -1,5 +1,8 @@
 NotForProfit::Application.routes.draw do
 
+  resources :receipts
+
+
   resources :purchaseorder_items
 
 

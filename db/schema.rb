@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131117222130) do
+ActiveRecord::Schema.define(:version => 20131118072808) do
 
   create_table "binholdings", :force => true do |t|
     t.string   "description"
@@ -111,6 +111,19 @@ ActiveRecord::Schema.define(:version => 20131117222130) do
     t.integer  "manifest_item_id"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+  end
+
+  create_table "receipts", :force => true do |t|
+    t.string   "stock_code"
+    t.string   "part_no"
+    t.string   "description"
+    t.string   "bin_location"
+    t.string   "receipt_ref"
+    t.string   "oum"
+    t.integer  "label_qty"
+    t.boolean  "complete_order"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "stockcodes", :force => true do |t|

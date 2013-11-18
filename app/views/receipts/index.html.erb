@@ -1,0 +1,35 @@
+<h2>Receipt Review</h2>
+
+<table>
+  <tr>
+    <th>Stock code</th>
+    <th>Part no</th>
+    <th>Description</th>
+    <th>Bin location</th>
+    <th>Receipt ref</th>
+    <th>Oum</th>
+    <th>Label qty</th>
+    <th>Complete order</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @receipts.each do |receipt| %>
+  <tr>
+    <td><%= receipt.stock_code %></td>
+    <td><%= receipt.part_no %></td>
+    <td><%= receipt.description %></td>
+    <td><%= receipt.bin_location %></td>
+    <td><%= receipt.receipt_ref %></td>
+    <td><%= receipt.oum %></td>
+    <td><%= receipt.label_qty %></td>
+    <td><%= receipt.complete_order %></td>
+    <td><%= link_to 'Show', receipt %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Receipt', new_receipt_path %>

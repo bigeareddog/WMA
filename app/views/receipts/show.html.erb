@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Stock code:</b>
+  <%= @receipt.stock_code %>
+</p>
+
+<p>
+  <b>Part no:</b>
+  <%= @receipt.part_no %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @receipt.description %>
+</p>
+
+<p>
+  <b>Bin location:</b>
+  <%= @receipt.bin_location %>
+</p>
+
+<p>
+  <b>Receipt ref:</b>
+  <%= @receipt.receipt_ref %>
+</p>
+
+<p>
+  <b>Oum:</b>
+  <%= @receipt.oum %>
+</p>
+
+<p>
+  <b>Label qty:</b>
+  <%= @receipt.label_qty %>
+</p>
+
+<p>
+  <b>Complete order:</b>
+  <%= @receipt.complete_order %>
+</p>
+
+
+<%= link_to 'Edit', edit_receipt_path(@receipt) %> |
+<%= link_to 'Back', receipts_path %>
