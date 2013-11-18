@@ -1,0 +1,29 @@
+<%= form_for(@manifest) do |f| %>
+  <% if @manifest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@manifest.errors.count, "error") %> prohibited this manifest from being saved:</h2>
+
+      <ul>
+      <% @manifest.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :manifest_no %><br />
+    <%= f.text_field :manifest_no %>
+  </div>
+  <div class="field">
+    <%= f.label :eta_date %><br />
+    <%= f.datetime_select :eta_date %>
+  </div>
+  <div class="field">
+    <%= f.label :trailers %><br />
+    <%= f.text_field :trailers %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

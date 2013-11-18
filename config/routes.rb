@@ -1,5 +1,17 @@
 NotForProfit::Application.routes.draw do
 
+  resources :purchaseorder_items
+
+
+  resources :purchaseorders
+
+
+  resources :manifest_items
+
+
+  resources :manifests
+
+
   resources :binholdings
 
 

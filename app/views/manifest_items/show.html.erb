@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Manifest no:</b>
+  <%= @manifest_item.manifest_no %>
+</p>
+
+<p>
+  <b>Con note:</b>
+  <%= @manifest_item.con_note %>
+</p>
+
+<p>
+  <b>Organisation:</b>
+  <%= @manifest_item.organisation %>
+</p>
+
+<p>
+  <b>Con note date:</b>
+  <%= @manifest_item.con_note_date %>
+</p>
+
+<p>
+  <b>Sender:</b>
+  <%= @manifest_item.sender %>
+</p>
+
+<p>
+  <b>Receiver:</b>
+  <%= @manifest_item.receiver %>
+</p>
+
+<p>
+  <b>Number items:</b>
+  <%= @manifest_item.number_items %>
+</p>
+
+<p>
+  <b>Pallet description:</b>
+  <%= @manifest_item.pallet_description %>
+</p>
+
+<p>
+  <b>Pallet weight:</b>
+  <%= @manifest_item.pallet_weight %>
+</p>
+
+<p>
+  <b>Manifest po no:</b>
+  <%= @manifest_item.manifest_po_no %>
+</p>
+
+<p>
+  <b>Manifest:</b>
+  <%= @manifest_item.manifest_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_manifest_item_path(@manifest_item) %> |
+<%= link_to 'Back', manifest_items_path %>

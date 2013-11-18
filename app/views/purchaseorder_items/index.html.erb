@@ -1,0 +1,65 @@
+<h1>Listing purchaseorder_items</h1>
+
+<table>
+  <tr>
+    <th>Po no</th>
+    <th>Po item no</th>
+    <th>Status</th>
+    <th>District code</th>
+    <th>Po item type</th>
+    <th>Receipt status</th>
+    <th>Curr due date</th>
+    <th>Due site date</th>
+    <th>Act lead time</th>
+    <th>Preq stock code</th>
+    <th>Stock code</th>
+    <th>Purchase req</th>
+    <th>Purchase req item</th>
+    <th>Create date</th>
+    <th>Unit of purch</th>
+    <th>Unit of issue</th>
+    <th>Price code</th>
+    <th>Orig due date</th>
+    <th>Orig qty</th>
+    <th>Warehouse</th>
+    <th>Curr qty</th>
+    <th>Purchaseorder</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @purchaseorder_items.each do |purchaseorder_item| %>
+  <tr>
+    <td><%= purchaseorder_item.po_no %></td>
+    <td><%= purchaseorder_item.po_item_no %></td>
+    <td><%= purchaseorder_item.status %></td>
+    <td><%= purchaseorder_item.district_code %></td>
+    <td><%= purchaseorder_item.po_item_type %></td>
+    <td><%= purchaseorder_item.receipt_status %></td>
+    <td><%= purchaseorder_item.curr_due_date %></td>
+    <td><%= purchaseorder_item.due_site_date %></td>
+    <td><%= purchaseorder_item.act_lead_time %></td>
+    <td><%= purchaseorder_item.preq_stock_code %></td>
+    <td><%= purchaseorder_item.stock_code %></td>
+    <td><%= purchaseorder_item.purchase_req %></td>
+    <td><%= purchaseorder_item.purchase_req_item %></td>
+    <td><%= purchaseorder_item.create_date %></td>
+    <td><%= purchaseorder_item.unit_of_purch %></td>
+    <td><%= purchaseorder_item.unit_of_issue %></td>
+    <td><%= purchaseorder_item.price_code %></td>
+    <td><%= purchaseorder_item.orig_due_date %></td>
+    <td><%= purchaseorder_item.orig_qty %></td>
+    <td><%= purchaseorder_item.warehouse_id %></td>
+    <td><%= purchaseorder_item.curr_qty %></td>
+    <td><%= purchaseorder_item.purchaseorder_id %></td>
+    <td><%= link_to 'Show', purchaseorder_item %></td>
+    <td><%= link_to 'Edit', edit_purchaseorder_item_path(purchaseorder_item) %></td>
+    <td><%= link_to 'Destroy', purchaseorder_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Purchaseorder item', new_purchaseorder_item_path %>

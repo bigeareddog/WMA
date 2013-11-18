@@ -1,0 +1,115 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Po no:</b>
+  <%= @purchaseorder_item.po_no %>
+</p>
+
+<p>
+  <b>Po item no:</b>
+  <%= @purchaseorder_item.po_item_no %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @purchaseorder_item.status %>
+</p>
+
+<p>
+  <b>District code:</b>
+  <%= @purchaseorder_item.district_code %>
+</p>
+
+<p>
+  <b>Po item type:</b>
+  <%= @purchaseorder_item.po_item_type %>
+</p>
+
+<p>
+  <b>Receipt status:</b>
+  <%= @purchaseorder_item.receipt_status %>
+</p>
+
+<p>
+  <b>Curr due date:</b>
+  <%= @purchaseorder_item.curr_due_date %>
+</p>
+
+<p>
+  <b>Due site date:</b>
+  <%= @purchaseorder_item.due_site_date %>
+</p>
+
+<p>
+  <b>Act lead time:</b>
+  <%= @purchaseorder_item.act_lead_time %>
+</p>
+
+<p>
+  <b>Preq stock code:</b>
+  <%= @purchaseorder_item.preq_stock_code %>
+</p>
+
+<p>
+  <b>Stock code:</b>
+  <%= @purchaseorder_item.stock_code %>
+</p>
+
+<p>
+  <b>Purchase req:</b>
+  <%= @purchaseorder_item.purchase_req %>
+</p>
+
+<p>
+  <b>Purchase req item:</b>
+  <%= @purchaseorder_item.purchase_req_item %>
+</p>
+
+<p>
+  <b>Create date:</b>
+  <%= @purchaseorder_item.create_date %>
+</p>
+
+<p>
+  <b>Unit of purch:</b>
+  <%= @purchaseorder_item.unit_of_purch %>
+</p>
+
+<p>
+  <b>Unit of issue:</b>
+  <%= @purchaseorder_item.unit_of_issue %>
+</p>
+
+<p>
+  <b>Price code:</b>
+  <%= @purchaseorder_item.price_code %>
+</p>
+
+<p>
+  <b>Orig due date:</b>
+  <%= @purchaseorder_item.orig_due_date %>
+</p>
+
+<p>
+  <b>Orig qty:</b>
+  <%= @purchaseorder_item.orig_qty %>
+</p>
+
+<p>
+  <b>Warehouse:</b>
+  <%= @purchaseorder_item.warehouse_id %>
+</p>
+
+<p>
+  <b>Curr qty:</b>
+  <%= @purchaseorder_item.curr_qty %>
+</p>
+
+<p>
+  <b>Purchaseorder:</b>
+  <%= @purchaseorder_item.purchaseorder_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_purchaseorder_item_path(@purchaseorder_item) %> |
+<%= link_to 'Back', purchaseorder_items_path %>

@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Manifest no:</b>
+  <%= @manifest.manifest_no %>
+</p>
+
+<p>
+  <b>Eta date:</b>
+  <%= @manifest.eta_date %>
+</p>
+
+<p>
+  <b>Trailers:</b>
+  <%= @manifest.trailers %>
+</p>
+
+<h1>Listing manifest_items</h1>
+
+<table>
+  <tr>
+    <th>C/Note</th>
+    <th>Organisation</th>
+    <th>Date</td>
+    <th>Sender</th>
+    <th>No items</th>
+    <th>Pallet</th>
+    <th>Weight</th>
+    <th>PO No</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @manifest_items.each do |manifest_item| %>
+  <tr>
+    <td><%= manifest_item.con_note %></td>
+    <td><%= manifest_item.organisation %></td>
+    <td><%= manifest_item.con_note_date %></td>
+    <td><%= manifest_item.sender %></td>
+    <td><%= manifest_item.number_items %></td>
+    <td><%= manifest_item.pallet_description %></td>
+    <td><%= manifest_item.pallet_weight %></td>
+    <td><%= manifest_item.manifest_po_no %></td>
+    <td><%= link_to 'Show', manifest_item %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Edit', edit_manifest_path(@manifest) %> |
+<%= link_to 'Back', manifests_path %>

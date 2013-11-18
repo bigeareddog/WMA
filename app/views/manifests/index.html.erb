@@ -1,0 +1,25 @@
+<h1>Manifests</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Manifest no</th>
+    <th>Eta date</th>
+    <th>Trailers</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @manifests.each do |manifest| %>
+  <tr>
+    <td><%= manifest.manifest_no %></td>
+    <td><%= manifest.eta_date %></td>
+    <td><%= manifest.trailers %></td>
+    <td><%= link_to 'Show', manifest %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Manifest', new_manifest_path %>

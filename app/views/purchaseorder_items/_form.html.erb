@@ -1,0 +1,105 @@
+<%= form_for(@purchaseorder_item) do |f| %>
+  <% if @purchaseorder_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@purchaseorder_item.errors.count, "error") %> prohibited this purchaseorder_item from being saved:</h2>
+
+      <ul>
+      <% @purchaseorder_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :po_no %><br />
+    <%= f.text_field :po_no %>
+  </div>
+  <div class="field">
+    <%= f.label :po_item_no %><br />
+    <%= f.text_field :po_item_no %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :district_code %><br />
+    <%= f.text_field :district_code %>
+  </div>
+  <div class="field">
+    <%= f.label :po_item_type %><br />
+    <%= f.text_field :po_item_type %>
+  </div>
+  <div class="field">
+    <%= f.label :receipt_status %><br />
+    <%= f.text_field :receipt_status %>
+  </div>
+  <div class="field">
+    <%= f.label :curr_due_date %><br />
+    <%= f.date_select :curr_due_date %>
+  </div>
+  <div class="field">
+    <%= f.label :due_site_date %><br />
+    <%= f.text_field :due_site_date %>
+  </div>
+  <div class="field">
+    <%= f.label :act_lead_time %><br />
+    <%= f.number_field :act_lead_time %>
+  </div>
+  <div class="field">
+    <%= f.label :preq_stock_code %><br />
+    <%= f.text_field :preq_stock_code %>
+  </div>
+  <div class="field">
+    <%= f.label :stock_code %><br />
+    <%= f.text_field :stock_code %>
+  </div>
+  <div class="field">
+    <%= f.label :purchase_req %><br />
+    <%= f.text_field :purchase_req %>
+  </div>
+  <div class="field">
+    <%= f.label :purchase_req_item %><br />
+    <%= f.text_field :purchase_req_item %>
+  </div>
+  <div class="field">
+    <%= f.label :create_date %><br />
+    <%= f.date_select :create_date %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_of_purch %><br />
+    <%= f.text_field :unit_of_purch %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_of_issue %><br />
+    <%= f.text_field :unit_of_issue %>
+  </div>
+  <div class="field">
+    <%= f.label :price_code %><br />
+    <%= f.text_field :price_code %>
+  </div>
+  <div class="field">
+    <%= f.label :orig_due_date %><br />
+    <%= f.date_select :orig_due_date %>
+  </div>
+  <div class="field">
+    <%= f.label :orig_qty %><br />
+    <%= f.number_field :orig_qty %>
+  </div>
+  <div class="field">
+    <%= f.label :warehouse_id %><br />
+    <%= f.text_field :warehouse_id %>
+  </div>
+  <div class="field">
+    <%= f.label :curr_qty %><br />
+    <%= f.text_field :curr_qty %>
+  </div>
+  <div class="field">
+    <%= f.label :purchaseorder_id %><br />
+    <%= f.number_field :purchaseorder_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

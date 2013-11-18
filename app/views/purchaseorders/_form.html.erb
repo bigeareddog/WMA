@@ -1,0 +1,97 @@
+<%= form_for(@purchaseorder) do |f| %>
+  <% if @purchaseorder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@purchaseorder.errors.count, "error") %> prohibited this purchaseorder from being saved:</h2>
+
+      <ul>
+      <% @purchaseorder.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :po_no %><br />
+    <%= f.text_field :po_no %>
+  </div>
+  <div class="field">
+    <%= f.label :po_type %><br />
+    <%= f.text_field :po_type %>
+  </div>
+  <div class="field">
+    <%= f.label :warehouse_id %><br />
+    <%= f.text_field :warehouse_id %>
+  </div>
+  <div class="field">
+    <%= f.label :supplier_no %><br />
+    <%= f.text_field :supplier_no %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :district_code %><br />
+    <%= f.text_field :district_code %>
+  </div>
+  <div class="field">
+    <%= f.label :freight_code %><br />
+    <%= f.text_field :freight_code %>
+  </div>
+  <div class="field">
+    <%= f.label :delivery_location %><br />
+    <%= f.text_field :delivery_location %>
+  </div>
+  <div class="field">
+    <%= f.label :order_date %><br />
+    <%= f.date_select :order_date %>
+  </div>
+  <div class="field">
+    <%= f.label :creation_date %><br />
+    <%= f.text_field :creation_date %>
+  </div>
+  <div class="field">
+    <%= f.label :completed_date %><br />
+    <%= f.text_field :completed_date %>
+  </div>
+  <div class="field">
+    <%= f.label :creation_user %><br />
+    <%= f.text_field :creation_user %>
+  </div>
+  <div class="field">
+    <%= f.label :order_orig %><br />
+    <%= f.text_field :order_orig %>
+  </div>
+  <div class="field">
+    <%= f.label :purch_officer %><br />
+    <%= f.text_field :purch_officer %>
+  </div>
+  <div class="field">
+    <%= f.label :owned_stk_ind %><br />
+    <%= f.text_field :owned_stk_ind %>
+  </div>
+  <div class="field">
+    <%= f.label :con_stock_ind %><br />
+    <%= f.text_field :con_stock_ind %>
+  </div>
+  <div class="field">
+    <%= f.label :preq_item_ind %><br />
+    <%= f.text_field :preq_item_ind %>
+  </div>
+  <div class="field">
+    <%= f.label :last_rcpt_no %><br />
+    <%= f.text_field :last_rcpt_no %>
+  </div>
+  <div class="field">
+    <%= f.label :origin_code %><br />
+    <%= f.text_field :origin_code %>
+  </div>
+  <div class="field">
+    <%= f.label :manifest_item_id %><br />
+    <%= f.number_field :manifest_item_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

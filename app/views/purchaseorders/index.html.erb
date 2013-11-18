@@ -1,0 +1,61 @@
+<h1>Listing purchaseorders</h1>
+
+<table>
+  <tr>
+    <th>Po no</th>
+    <th>Po type</th>
+    <th>Warehouse</th>
+    <th>Supplier no</th>
+    <th>Status</th>
+    <th>District code</th>
+    <th>Freight code</th>
+    <th>Delivery location</th>
+    <th>Order date</th>
+    <th>Creation date</th>
+    <th>Completed date</th>
+    <th>Creation user</th>
+    <th>Order orig</th>
+    <th>Purch officer</th>
+    <th>Owned stk ind</th>
+    <th>Con stock ind</th>
+    <th>Preq item ind</th>
+    <th>Last rcpt no</th>
+    <th>Origin code</th>
+    <th>Manifest item</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @purchaseorders.each do |purchaseorder| %>
+  <tr>
+    <td><%= purchaseorder.po_no %></td>
+    <td><%= purchaseorder.po_type %></td>
+    <td><%= purchaseorder.warehouse_id %></td>
+    <td><%= purchaseorder.supplier_no %></td>
+    <td><%= purchaseorder.status %></td>
+    <td><%= purchaseorder.district_code %></td>
+    <td><%= purchaseorder.freight_code %></td>
+    <td><%= purchaseorder.delivery_location %></td>
+    <td><%= purchaseorder.order_date %></td>
+    <td><%= purchaseorder.creation_date %></td>
+    <td><%= purchaseorder.completed_date %></td>
+    <td><%= purchaseorder.creation_user %></td>
+    <td><%= purchaseorder.order_orig %></td>
+    <td><%= purchaseorder.purch_officer %></td>
+    <td><%= purchaseorder.owned_stk_ind %></td>
+    <td><%= purchaseorder.con_stock_ind %></td>
+    <td><%= purchaseorder.preq_item_ind %></td>
+    <td><%= purchaseorder.last_rcpt_no %></td>
+    <td><%= purchaseorder.origin_code %></td>
+    <td><%= purchaseorder.manifest_item_id %></td>
+    <td><%= link_to 'Show', purchaseorder %></td>
+    <td><%= link_to 'Edit', edit_purchaseorder_path(purchaseorder) %></td>
+    <td><%= link_to 'Destroy', purchaseorder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Purchaseorder', new_purchaseorder_path %>
