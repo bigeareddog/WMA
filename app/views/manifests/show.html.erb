@@ -43,8 +43,8 @@
     <td><%= manifest_item.number_items %></td>
     <td><%= manifest_item.pallet_description %></td>
     <td><%= manifest_item.pallet_weight %></td>
-    <td><%= link_to manifest_item.manifest_po_no, purchaseorder_path %></td>
-    <td><%= link_to 'Show', manifest_item %></td>
+    <td><%= link_to manifest_item.manifest_po_no, purchaseorder_path,class: "btn btn-large btn-success"  %></td>
+    <td><%= link_to 'Show', manifest_item,class: "btn btn-large btn-primary"  %></td>
   </tr>
 <% end %>
 </table>
