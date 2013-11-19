@@ -1,3 +1,21 @@
+<script>
+$(document).ready( function () {
+  $('#example').dataTable( {
+    "sDom": "<'row-fluid'<'span6'T><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+      "oTableTools": {
+        "aButtons": [
+          "copy",
+            "print",
+            {
+              "sExtends":    "collection",
+              "sButtonText": 'Save <span class="caret" />',
+              "aButtons":    [ "csv", "xls", "pdf" ]
+            }
+         ]
+       }
+     } );
+ } );
+</script>
 
 <h2> Purchase Order Details </h2> 
 
@@ -55,11 +73,12 @@
 
 <h2> Purchase Order Items </h2>
 
-<table class="table table-striped" >
+
+<table id="purchaseorders", cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered"  >
+ <thead>     
   <tr>
     <th>Po no</th>
     <th>Po item no</th>
-    <th>Status</th>
     <th>District code</th>
     <th>Stock code</th>
     <th>Purchase req</th>
@@ -67,12 +86,13 @@
     <th>Unit of issue</th>
     <th>Warehouse</th>
     <th>Order Qty</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>PO Action</th>
+    <th>Action</th>
   </tr>
+ </thead>
 
-<% @purchaseorder_items.each do |purchaseorder_item| %>
+<tbody>
+ <% @purchaseorder_items.each do |purchaseorder_item| %>
   <tr>
     <td><%= purchaseorder_item.po_no %></td>
     <td><%= purchaseorder_item.po_item_no %></td>
@@ -87,6 +107,7 @@
 
     <td><%= link_to 'Show', purchaseorder_item,class: "btn btn-large btn-primary"  %></td>
   </tr>
+ </tbody>
 <% end %>
 </table>
 <%= link_to 'Edit', edit_purchaseorder_path(@purchaseorder) %> |
