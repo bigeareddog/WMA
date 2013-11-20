@@ -1,23 +1,34 @@
-<% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="span4">
-    <section>
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-     </h1>
-    </section>
-    </aside>
-</div>
-<div>
-      This is the Angloamerican Warehouse Application home page. You have access to the following applications:
-</div>
-<div>
-	<h2>Manifests</h2>	
-	<%= link_to "Details", manifests_path, class: "btn btn-large btn-primary" %> 
-</div>
-
-<div>
-	<h2>Receipt Review</h2>	
-	<%= link_to "Details", receipts_path, class: "btn btn-large btn-primary" %> 
+<div class="page-header" id="banner">
+	<div class="row">
+		<div class="col-lg-6">
+			<h1 id="container"></h1>
+				<div class="jumbotron">
+    			<h1 id="forms">Home Page</h1>           
+					<% provide(:title, @user.name) %>
+					<div class="row">
+		  			<aside class="span4">
+    					<section>
+      					<h2>
+       						<%= gravatar_for @user %>
+      	 			  		<%= @user.name %>
+     					</h2>
+   			 			</section>
+    				</aside>
+	 				</div>
+				<div>
+				 <h3>
+	 		     	This is the Angloamerican Warehouse Application home page. You have access to the following applications:
+	 		     </h3>
+				</div>
+				<div>
+					<h2>Manifests</h2>	
+					<%= link_to "Details", manifests_path, class: "btn btn-large btn-primary" %> 
+				</div>
+				<div>
+					<h2>Receipt Review</h2>	
+					<%= link_to "Details", receipts_path, class: "btn btn-large btn-primary" %> 
+				</div>
+		</div>
+ 	</div>
+ </div>
 </div>
