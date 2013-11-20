@@ -1,93 +1,232 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-#  Manifest.create(manifest_no: '19065400', eta_date: '2013-11-17 10:45:00 UTC' ,trailers: '4CF18163')
-#  Manifest.create(manifest_no: '19065401', eta_date: '2013-11-17 11:45:00 UTC' ,trailers: '4CF18165')
-#  Manifest.create(manifest_no: '19065402', eta_date: '2013-11-17 13:45:00 UTC' ,trailers: '4CF18166')
-#  Manifest.create(manifest_no: '19065403', eta_date: '2013-11-17 14:45:00 UTC' ,trailers: '4CF18167')
-# Manifest.create(manifest_no: '19065404', eta_date: '2013-11-17 15:45:00 UTC' ,trailers: '4CF18168')  
-#Manifest.create(manifest_no: '19065409', eta_date: '2013-11-18 10:45:00 UTC' ,trailers: '4CF18169')
-#Manifest.create(manifest_no: '19065411', eta_date: '2013-11-18 13:45:00 UTC' ,trailers: '4CF181611')
-#Manifest.create(manifest_no: '19065412', eta_date: '2013-11-18 14:45:00 UTC' ,trailers: '4CF181612')
-#Manifest.create(manifest_no: '19065413', eta_date: '2013-11-18 15:45:00 UTC' ,trailers: '4CF181613')  
-#Manifest.create(manifest_no: '19065414', eta_date: '2013-11-19 10:45:00 UTC' ,trailers: '4CF181614')
-#Manifest.create(manifest_no: '19065415', eta_date: '2013-11-20 11:45:00 UTC' ,trailers: '4CF181615')
-#Manifest.create(manifest_no: '19065416', eta_date: '2013-11-21 13:45:00 UTC' ,trailers: '4CF181616')
-#Manifest.create(manifest_no: '19065417', eta_date: '2013-11-22 14:45:00 UTC' ,trailers: '4CF181617')  
-#Manifest.create(manifest_no: '19065418', eta_date: '2013-11-23 15:45:00 UTC' ,trailers: '4CF181618')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-0', manifest_po_no: 'MR3642', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '1', con_note_date: '19/11/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-1', manifest_po_no: 'MR3643', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '2', con_note_date: '20/11/2013  5:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-2', manifest_po_no: 'MR3644', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '3', con_note_date: '21/11/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-3', manifest_po_no: 'MR3645', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '4', con_note_date: '22/11/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-4', manifest_po_no: 'MR3646', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '5', con_note_date: '23/11/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-5', manifest_po_no: 'MR3647', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '6', con_note_date: '24/11/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-6', manifest_po_no: 'MR3648', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '7', con_note_date: '25/11/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-7', manifest_po_no: 'MR3649', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '8', con_note_date: '26/11/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-8', manifest_po_no: 'MR3650', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '9', con_note_date: '27/11/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-9', manifest_po_no: 'MR3651', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '10', con_note_date: '28/11/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-10', manifest_po_no: 'MR3652', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '11', con_note_date: '29/11/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-11', manifest_po_no: 'MR3653', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '12', con_note_date: '30/11/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-12', manifest_po_no: 'MR3654', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '13', con_note_date: '1/12/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-12', manifest_po_no: 'MR3655', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '14', con_note_date: '2/12/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-12', manifest_po_no: 'MR3656', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '15', con_note_date: '3/12/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065400', manifest_id: '1', con_note: '2128597196-12', manifest_po_no: 'MR3657', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '16', con_note_date: '4/12/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065401', manifest_id: '2', con_note: '2128597196-12', manifest_po_no: 'MR3658', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '17', con_note_date: '5/12/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065401', manifest_id: '2', con_note: '2128597196-12', manifest_po_no: 'MR3659', pallet_description: 'STANDARD', pallet_weight: '500', number_items: '18', con_note_date: '6/12/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065401', manifest_id: '2', con_note: '2128597196-12', manifest_po_no: 'MR3660', pallet_description: 'SMALL', pallet_weight: '1000', number_items: '19', con_note_date: '7/12/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065401', manifest_id: '2', con_note: '2128597196-12', manifest_po_no: 'MR3661', pallet_description: 'SMALL', pallet_weight: '1000', number_items: '20', con_note_date: '8/12/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065401', manifest_id: '2', con_note: '2128597196-12', manifest_po_no: 'MR3662', pallet_description: 'SMALL', pallet_weight: '1000', number_items: '21', con_note_date: '9/12/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065401', manifest_id: '2', con_note: '2128597196-12', manifest_po_no: 'MR3663', pallet_description: 'SMALL', pallet_weight: '1000', number_items: '22', con_note_date: '10/12/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065401', manifest_id: '2', con_note: '2128597196-12', manifest_po_no: 'MR3664', pallet_description: 'SMALL', pallet_weight: '1000', number_items: '23', con_note_date: '11/12/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065401', manifest_id: '2', con_note: '2128597196-12', manifest_po_no: 'MR3665', pallet_description: 'SMALL', pallet_weight: '1000', number_items: '24', con_note_date: '12/12/2013  5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD ')
-ManifestItem.create(manifest_no: '19065401', manifest_id: '2', con_note: '2128597196-24', manifest_po_no: 'MR3666', pallet_description: 'SMALL', pallet_weight: '1000', number_items: '25', con_note_date: '13/12/2013  5:15:31 AM', sender: 'TEAM TAXI TRUCKS ')
-ManifestItem.create(manifest_no: '19065401', manifest_id: '2', con_note: '2128597196-25', manifest_po_no: 'MR3667', pallet_description: 'SMALL', pallet_weight: '1000', number_items: '26', con_note_date: '14/12/2013  5:15:31 AM', sender: 'TEAM TAXI TRUCKS ')
-ManifestItem.create(manifest_no: '19065401', manifest_id: '2', con_note: '2128597196-26', manifest_po_no: 'MR3668', pallet_description: 'SMALL', pallet_weight: '1000', number_items: '27', con_note_date: '15/12/2013  5:15:31 AM', sender: 'TEAM TAXI TRUCKS ')
-ManifestItem.create(manifest_no: '19065401', manifest_id: '2', con_note: '2128597196-27', manifest_po_no: 'MR3669', pallet_description: 'SMALL', pallet_weight: '1000', number_items: '28', con_note_date: '16/12/2013  5:15:31 AM', sender: 'TEAM TAXI TRUCKS ')
-ManifestItem.create(manifest_no: '19065402', manifest_id: '3', con_note: '2128597196-28', manifest_po_no: 'MR3670', pallet_description: 'SMALL', pallet_weight: '1000', number_items: '29', con_note_date: '17/12/2013  5:15:31 AM', sender: 'TEAM TAXI TRUCKS ')
-ManifestItem.create(manifest_no: '19065402', manifest_id: '3', con_note: '2128597196-29', manifest_po_no: 'MR3671', pallet_description: 'SMALL', pallet_weight: '1000', number_items: '30', con_note_date: '18/12/2013  5:15:31 AM', sender: 'TEAM TAXI TRUCKS ')
-ManifestItem.create(manifest_no: '19065402', manifest_id: '3', con_note: '2128597196-30', manifest_po_no: 'MR3672', pallet_description: 'SMALL', pallet_weight: '1000', number_items: '31', con_note_date: '19/12/2013  5:15:31 AM', sender: 'TEAM TAXI TRUCKS ')
-ManifestItem.create(manifest_no: '19065402', manifest_id: '3', con_note: '2128597196-31', manifest_po_no: 'MR3673', pallet_description: 'SMALL', pallet_weight: '1000', number_items: '32', con_note_date: '20/12/2013  5:15:31 AM', sender: 'TEAM TAXI TRUCKS ')
-ManifestItem.create(manifest_no: '19065402', manifest_id: '3', con_note: '2128597196-32', manifest_po_no: 'MR3674', pallet_description: 'LARGE', pallet_weight: '1000', number_items: '33', con_note_date: '21/12/2013  5:15:31 AM', sender: 'TEAM TAXI TRUCKS ')
-ManifestItem.create(manifest_no: '19065402', manifest_id: '3', con_note: '2128597196-32', manifest_po_no: 'MR3675', pallet_description: 'LARGE', pallet_weight: '1000', number_items: '34', con_note_date: '22/12/2013  5:15:31 AM', sender: 'TEAM TAXI TRUCKS ')
-ManifestItem.create(manifest_no: '19065402', manifest_id: '3', con_note: '2128597196-32', manifest_po_no: 'MR3676', pallet_description: 'LARGE', pallet_weight: '1000', number_items: '35', con_note_date: '23/12/2013  5:15:31 AM', sender: 'TEAM TAXI TRUCKS ')
-ManifestItem.create(manifest_no: '19065403', manifest_id: '4', con_note: '2128597196-32', manifest_po_no: 'MR3677', pallet_description: 'LARGE', pallet_weight: '1000', number_items: '36', con_note_date: '24/12/2013  5:15:31 AM', sender: 'TEAM TAXI TRUCKS ')
-ManifestItem.create(manifest_no: '19065403', manifest_id: '4', con_note: '2128597196-32', manifest_po_no: 'MR3678', pallet_description: 'LARGE', pallet_weight: '1000', number_items: '37', con_note_date: '25/12/2013  5:15:31 AM', sender: 'TEAM TAXI TRUCKS ')
-ManifestItem.create(manifest_no: '19065403', manifest_id: '4', con_note: '2128597196-32', manifest_po_no: 'MR3679', pallet_description: 'LARGE', pallet_weight: '1000', number_items: '38', con_note_date: '26/12/2013  5:15:31 AM', sender: 'TEAM TAXI TRUCKS ')
-ManifestItem.create(manifest_no: '19065403', manifest_id: '4', con_note: '2128597196-32', manifest_po_no: 'MR3680', pallet_description: 'LARGE', pallet_weight: '1000', number_items: '39', con_note_date: '27/12/2013  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065403', manifest_id: '4', con_note: '2128597196-32', manifest_po_no: 'MR3681', pallet_description: 'LARGE', pallet_weight: '1000', number_items: '40', con_note_date: '28/12/2013   AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065403', manifest_id: '4', con_note: '2128597196-32', manifest_po_no: 'MR3682', pallet_description: 'LARGE', pallet_weight: '1000', number_items: '41', con_note_date: '29/12/2013  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065404', manifest_id: '5', con_note: '2128597196-32', manifest_po_no: 'MR3683', pallet_description: 'LARGE', pallet_weight: '1000', number_items: '42', con_note_date: '30/12/2013  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065404', manifest_id: '5', con_note: '2128597196-32', manifest_po_no: 'MR3684', pallet_description: 'LARGE', pallet_weight: '1000', number_items: '43', con_note_date: '31/12/2013  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065404', manifest_id: '5', con_note: '2128597196-32', manifest_po_no: 'MR3685', pallet_description: 'CONTAINER', pallet_weight: '2000', number_items: '44', con_note_date: '1/01/2014  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065404', manifest_id: '5', con_note: '2128597196-32', manifest_po_no: 'MR3686', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '45', con_note_date: '2/01/2014  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065404', manifest_id: '5', con_note: '2128597196-32', manifest_po_no: 'MR3687', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '46', con_note_date: '3/01/2014  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065409', manifest_id: '6', con_note: '2128597196-46', manifest_po_no: 'MR3688', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '47', con_note_date: '4/01/2014  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065409', manifest_id: '6', con_note: '2128597196-47', manifest_po_no: 'MR3689', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '48', con_note_date: '5/01/2014  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065409', manifest_id: '6', con_note: '2128597196-48', manifest_po_no: 'MR3690', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '49', con_note_date: '6/01/2014  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065409', manifest_id: '6', con_note: '2128597196-49', manifest_po_no: 'MR3691', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '50', con_note_date: '7/01/2014  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065409', manifest_id: '6', con_note: '2128597196-50', manifest_po_no: 'MR3692', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '51', con_note_date: '8/01/2014  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065409', manifest_id: '6', con_note: '2128597196-51', manifest_po_no: 'MR3693', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '52', con_note_date: '9/01/2014  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065409', manifest_id: '6', con_note: '2128597196-52', manifest_po_no: 'MR3694', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '53', con_note_date: '10/01/2014  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065410', manifest_id: '7', con_note: '2128597196-53', manifest_po_no: 'MR3695', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '54', con_note_date: '11/01/2014  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065410', manifest_id: '7', con_note: '2128597196-54', manifest_po_no: 'MR3696', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '55', con_note_date: '12/01/2014  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065410', manifest_id: '7', con_note: '2128597196-55', manifest_po_no: 'MR3697', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '56', con_note_date: '13/01/2014  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065410', manifest_id: '7', con_note: '2128597196-56', manifest_po_no: 'MR3698', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '57', con_note_date: '14/01/2014  5:15:31 AM', sender: 'JOY MINING MACHINERY ')
-ManifestItem.create(manifest_no: '19065410', manifest_id: '7', con_note: '2128597196-57', manifest_po_no: 'MR3699', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '58', con_note_date: '15/01/2014  5:15:31 AM', sender: 'HAYMANS ELECTRICAL (PAGET') 
-ManifestItem.create(manifest_no: '19065411', manifest_id: '8', con_note: '2128597196-58', manifest_po_no: 'MR3700', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '59', con_note_date: '16/01/2014  5:15:31 AM', sender: 'HAYMANS ELECTRICAL (PAGET') 
-ManifestItem.create(manifest_no: '19065411', manifest_id: '8', con_note: '2128597196-58', manifest_po_no: 'MR3701', pallet_description: 'CONTAINER', pallet_weight: '1000', number_items: '60', con_note_date: '17/01/2014  5:15:31 AM', sender: 'HAYMANS ELECTRICAL (PAGET') 
-ManifestItem.create(manifest_no: '19065411', manifest_id: '8', con_note: '2128597196-58', manifest_po_no: 'MR3702', pallet_description: 'FLATBED', pallet_weight: '4000', number_items: '61', con_note_date: '18/01/2014  5:15:31 AM', sender: 'HAYMANS ELECTRICAL (PAGET') 
-ManifestItem.create(manifest_no: '19065412', manifest_id: '9', con_note: '2128597196-58', manifest_po_no: 'MR3703', pallet_description: 'FLATBED', pallet_weight: '4000', number_items: '62', con_note_date: '19/01/2014  5:15:31 AM', sender: 'HAYMANS ELECTRICAL (PAGET') 
-ManifestItem.create(manifest_no: '19065412', manifest_id: '9', con_note: '2128597196-58', manifest_po_no: 'MR3704', pallet_description: 'FLATBED', pallet_weight: '4000', number_items: '63', con_note_date: '20/01/2014  5:15:31 AM', sender: 'HAYMANS ELECTRICAL (PAGET') 
-ManifestItem.create(manifest_no: '19065412', manifest_id: '9', con_note: '2128597196-58', manifest_po_no: 'MR3705', pallet_description: 'FLATBED', pallet_weight: '4000', number_items: '64', con_note_date: '21/01/2014  5:15:31 AM', sender: 'HAYMANS ELECTRICAL (PAGET') 
-ManifestItem.create(manifest_no: '19065412', manifest_id: '9', con_note: '2128597196-58', manifest_po_no: 'MR3706', pallet_description: 'FLATBED', pallet_weight: '4000', number_items: '65', con_note_date: '22/01/2014  5:15:31 AM', sender: 'HAYMANS ELECTRICAL (PAGET') 
-ManifestItem.create(manifest_no: '19065413', manifest_id: '10', con_note: '2128597196-58', manifest_po_no: 'MR3707', pallet_description: 'FLATBED', pallet_weight: '4000', number_items: '66', con_note_date: '23/01/2014  5:15:31 AM', sender: 'HAYMANS ELECTRICAL (PAGET') 
-ManifestItem.create(manifest_no: '19065414', manifest_id: '11', con_note: '2128597196-58', manifest_po_no: 'MR3708', pallet_description: 'FLATBED', pallet_weight: '4000', number_items: '67', con_note_date: '24/01/2014  5:15:31 AM', sender: 'HAYMANS ELECTRICAL (PAGET') 
-ManifestItem.create(manifest_no: '19065415', manifest_id: '12', con_note: '2128597196-58', manifest_po_no: 'MR3709', pallet_description: 'FLATBED', pallet_weight: '4000', number_items: '68', con_note_date: '25/01/2014  5:15:31 AM', sender: 'HAYMANS ELECTRICAL (PAGET') 
-ManifestItem.create(manifest_no: '19065416', manifest_id: '13', con_note: '2128597196-58', manifest_po_no: 'MR3710', pallet_description: 'FLATBED', pallet_weight: '4000', number_items: '69', con_note_date: '26/01/2014  5:15:31 AM', sender: 'J BLACKWOOD & SON LTD ')
-ManifestItem.create(manifest_no: '19065418', manifest_id: '15', con_note: '2128597196-69', manifest_po_no: 'MR3711', pallet_description: 'FLATBED', pallet_weight: '4000', number_items: '70', con_note_date: '27/01/2014  5:15:31 AM', sender: 'J BLACKWOOD & SON LTD ')
-ManifestItem.create(manifest_no: '19065418', manifest_id: '15', con_note: '2128597196-70', manifest_po_no: 'MR3712', pallet_description: 'FLATBED', pallet_weight: '4000', number_items: '71', con_note_date: '28/01/2014  5:15:31 AM', sender: 'J BLACKWOOD & SON LTD ')
-ManifestItem.create(manifest_no: '19065418', manifest_id: '15', con_note: '2128597196-71', manifest_po_no: 'MR3713', pallet_description: 'FLATBED', pallet_weight: '4000', number_items: '72', con_note_date: '29/01/2014  5:15:31 AM', sender: 'J BLACKWOOD & SON LTD ')
+man = Manifest.create(manifest_no: '19065400', eta_date: '2013-11-17 10:45:00 UTC' ,trailers: '4CF18163')
+man.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-0', manifest_po_no: 'MR3642',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '1',con_note_date: '19/11/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,	po_no: 'MR3642', 	po_type: 'N', 	supplier_no: '020811', 	status: '9', 	district_code: 'MORJ', 	freight_code: 'N1', 	delivery_location: 'MBEP', 	order_date: '01/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'MR3642', po_item_no: '001',status:  '9', district_code: 'MORJ',preq_stock_code: '099014001', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-1', manifest_po_no: 'MR3763',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '2',con_note_date: '20/11/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id, po_no: 'MR3763', 	po_type: 'N', 	supplier_no: '000294', 	status: '1', 	district_code: 'MORJ', 	freight_code: 'N4', 	delivery_location: 'MB01', 	order_date: '01/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id, po_no: 'MR3763', po_item_no: '001',status:  '1', district_code: 'MORJ',preq_stock_code: '007347081', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'MR3763', po_item_no: '002',status:  '1', district_code: 'MORJ',preq_stock_code: 'AM0803236', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-2', manifest_po_no: 'N31458',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '3',con_note_date: '21/11/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,po_no: 'N31458', 	po_type: 'N', 	supplier_no: '000490', 	status: ' ', 	district_code: 'MORJ', 	freight_code: 'XX', 	delivery_location: 'MB01', 	order_date: '01/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N31458', po_item_no: '001',status:  '1', district_code: 'MORJ',preq_stock_code: '096713001', unit_of_purch: 'SERV', unit_of_issue: 'SERV', orig_qty: '0', warehouse_id: 'MB01', curr_qty: '0')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-3', manifest_po_no: 'N32140',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '4',con_note_date: '22/11/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,	po_no: 'N32140', 	po_type: 'N', 	supplier_no: 'Y32618', 	status: '9', 	district_code: 'MORJ', 	freight_code: 'N3', 	delivery_location: 'MB01', 	order_date: '01/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N32140', po_item_no: '001',status:  '9', district_code: 'MORJ',preq_stock_code: '000801720', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '4', warehouse_id: 'MB01', curr_qty: '4')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N32140', po_item_no: '002',status:  '9', district_code: 'MORJ',preq_stock_code: '000804575', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '5', warehouse_id: 'MB01', curr_qty: '5')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N32140', po_item_no: '003',status:  '9', district_code: 'MORJ',preq_stock_code: '007373525', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-4', manifest_po_no: 'N34530',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '5',con_note_date: '23/11/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,po_no: 'N34530', 	po_type: 'N', 	supplier_no: '011791', 	status: '1', 	district_code: 'MORJ', 	freight_code: 'N3', 	delivery_location: 'MB01', 	order_date: '01/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N34530', po_item_no: '001',status:  '9', district_code: 'MORJ',preq_stock_code: '098210001', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '4', warehouse_id: 'MB01', curr_qty: '4')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N34530', po_item_no: '002',status:  '1', district_code: 'MORJ',preq_stock_code: '098210002', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '4', warehouse_id: 'MB01', curr_qty: '4')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-5', manifest_po_no: 'N35349',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '6',con_note_date: '24/11/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id, po_no: 'N35349', 	po_type: 'N', 	supplier_no: '000294', 	status: '9', 	district_code: 'MORJ', 	freight_code: 'N4', 	delivery_location: 'MB01', 	order_date: '01/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35349', po_item_no: '001',status:  '9', district_code: 'MORJ',preq_stock_code: '007346638', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '10', warehouse_id: 'MB01', curr_qty: '10')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35349', po_item_no: '002',status:  '9', district_code: 'MORJ',preq_stock_code: '007346646', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '10', warehouse_id: 'MB01', curr_qty: '10')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35349', po_item_no: '003',status:  '9', district_code: 'MORJ',preq_stock_code: '007346786', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35349', po_item_no: '004',status:  '9', district_code: 'MORJ',preq_stock_code: '007346794', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35349', po_item_no: '005',status:  '9', district_code: 'MORJ',preq_stock_code: '007347008', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '20', warehouse_id: 'MB01', curr_qty: '20')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35349', po_item_no: '006',status:  '9', district_code: 'MORJ',preq_stock_code: '007367816', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '2', warehouse_id: 'MB01', curr_qty: '2')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35349', po_item_no: '007',status:  '9', district_code: 'MORJ',preq_stock_code: '007429319', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35349', po_item_no: '008',status:  '9', district_code: 'MORJ',preq_stock_code: '007478860', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '2', warehouse_id: 'MB01', curr_qty: '2')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35349', po_item_no: '009',status:  '9', district_code: 'MORJ',preq_stock_code: '007478985', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '5', warehouse_id: 'MB01', curr_qty: '5')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35349', po_item_no: '010',status:  '9', district_code: 'MORJ',preq_stock_code: '007478993', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '2', warehouse_id: 'MB01', curr_qty: '2')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35349', po_item_no: '011',status:  '9', district_code: 'MORJ',preq_stock_code: '007479033', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '2', warehouse_id: 'MB01', curr_qty: '2')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35349', po_item_no: '012',status:  '9', district_code: 'MORJ',preq_stock_code: '007479041', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '2', warehouse_id: 'MB01', curr_qty: '2')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-6', manifest_po_no: 'N35809',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '7',con_note_date: '25/11/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,	po_no: 'N35809', 	po_type: 'N', 	supplier_no: '000294', 	status: '1', 	district_code: 'MORJ', 	freight_code: 'N4', 	delivery_location: 'MB01', 	order_date: '01/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35809', po_item_no: '001',status:  '1', district_code: 'MORJ',preq_stock_code: '007264856', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '75', warehouse_id: 'MB01', curr_qty: '75')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35809', po_item_no: '002',status:  '9', district_code: 'MORJ',preq_stock_code: '007555766', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '2', warehouse_id: 'MB01', curr_qty: '2')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35809', po_item_no: '003',status:  '1', district_code: 'MORJ',preq_stock_code: 'AM0803214', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-7', manifest_po_no: 'N35986',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '8',con_note_date: '26/11/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,po_no: 'N35986', 	po_type: 'N', 	supplier_no: '000294', 	status: '9', 	district_code: 'MORJ', 	freight_code: 'N4', 	delivery_location: 'MB01', 	order_date: '01/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N35986', po_item_no: '001',status:  '9', district_code: 'MORJ',preq_stock_code: '007254451', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '4', warehouse_id: 'MB01', curr_qty: '4')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-8', manifest_po_no: 'N36277',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '9',con_note_date: '27/11/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,po_no: 'N36277', 	po_type: 'N', 	supplier_no: '000294', 	status: ' ', 	district_code: 'MORJ', 	freight_code: 'N4', 	delivery_location: 'MB01', 	order_date: '01/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36277', po_item_no: '001',status:  '9', district_code: 'MORJ'	,preq_stock_code: '007429319', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36277', po_item_no: '002',status:  '9', district_code: 'MORJ',preq_stock_code: '007478860', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36277', po_item_no: '003',status:  '9', district_code: 'MORJ',preq_stock_code: '007479033', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '2', warehouse_id: 'MB01', curr_qty: '2')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36277', po_item_no: '004',status:  '9', district_code: 'MORJ',preq_stock_code: '007479074', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-9', manifest_po_no: 'N36565',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '10',con_note_date: '28/11/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,	po_no: 'N36565', 	po_type: 'N', 	supplier_no: '012647', 	status: '1', 	district_code: 'MORJ', 	freight_code: 'N1', 	delivery_location: 'MB01', 	order_date: '01/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36565', po_item_no: '001',status:  '1', district_code: 'MORJ',preq_stock_code: '007308208', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '100', warehouse_id: 'MB01', curr_qty: '100')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-10', manifest_po_no: 'N36726',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '11',con_note_date: '29/11/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,po_no: 'N36726', 	po_type: 'N', 	supplier_no: '000294', 	status: ' ', 	district_code: 'MORJ', 	freight_code: 'N4', 	delivery_location: 'MB01', 	order_date: '01/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36726', po_item_no: '001',status:  '9', district_code: 'MORJ',preq_stock_code: '007208564', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '6', warehouse_id: 'MB01', curr_qty: '6')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36726', po_item_no: '002',status:  '9', district_code: 'MORJ',preq_stock_code: '007208572', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '6', warehouse_id: 'MB01', curr_qty: '6')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36726', po_item_no: '003',status:  '9', district_code: 'MORJ',preq_stock_code: '007332729', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '8', warehouse_id: 'MB01', curr_qty: '8')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36726', po_item_no: '004',status:  '1', district_code: 'MORJ',preq_stock_code: '007392061', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '12', warehouse_id: 'MB01', curr_qty: '12')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36726', po_item_no: '005',status:  '1', district_code: 'MORJ',preq_stock_code: '007392079', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '8', warehouse_id: 'MB01', curr_qty: '8')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36726', po_item_no: '006',status:  '9', district_code: 'MORJ',preq_stock_code: '007473507', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '6', warehouse_id: 'MB01', curr_qty: '6')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36726', po_item_no: '007',status:  '1', district_code: 'MORJ',preq_stock_code: '007555766', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '3', warehouse_id: 'MB01', curr_qty: '3')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36726', po_item_no: '008',status:  '9', district_code: 'MORJ',preq_stock_code: '007562853', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '16', warehouse_id: 'MB01', curr_qty: '16')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36726', po_item_no: '009',status:  '9', district_code: 'MORJ',preq_stock_code: '007562911', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '10', warehouse_id: 'MB01', curr_qty: '10')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36726', po_item_no: '010',status:  '9', district_code: 'MORJ',preq_stock_code: '007562929', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '11', warehouse_id: 'MB01', curr_qty: '11')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-11', manifest_po_no: 'N36784',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '12',con_note_date: '30/11/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,	po_no: 'N36784', 	po_type: 'N', 	supplier_no: '000294', 	status: '9', 	district_code: 'MORJ', 	freight_code: 'N4', 	delivery_location: 'MB01', 	order_date: '01/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36784', po_item_no: '001',status:  '9', district_code: 'MORJ',preq_stock_code: '007346117', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '8', warehouse_id: 'MB01', curr_qty: '8')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36784', po_item_no: '002',status:  '9', district_code: 'MORJ',preq_stock_code: '007478936', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36784', po_item_no: '003',status:  '9', district_code: 'MORJ',preq_stock_code: '007479108', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '2', warehouse_id: 'MB01', curr_qty: '2')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36784', po_item_no: '004',status:  '9', district_code: 'MORJ',preq_stock_code: '007479165', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36784', po_item_no: '005',status:  '9', district_code: 'MORJ',preq_stock_code: 'AM0938494', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '2', warehouse_id: 'MB01', curr_qty: '2')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N36784', po_item_no: '006',status:  '9', district_code: 'MORJ',preq_stock_code: 'AM0938505', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '2', warehouse_id: 'MB01', curr_qty: '2')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-12', manifest_po_no: 'N37008',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '13',con_note_date: '1/12/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,	po_no: 'N37008', 	po_type: 'N', 	supplier_no: '000294', 	status: '1', 	district_code: 'MORJ', 	freight_code: 'N4', 	delivery_location: 'MB01', 	order_date: '01/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37008', po_item_no: '001',status:  '1', district_code: 'MORJ',preq_stock_code: '007247737', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37008', po_item_no: '002',status:  '9', district_code: 'MORJ',preq_stock_code: '007263486', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37008', po_item_no: '003',status:  '9', district_code: 'MORJ',preq_stock_code: '007429319', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37008', po_item_no: '004',status:  '9', district_code: 'MORJ',preq_stock_code: '007478860', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37008', po_item_no: '005',status:  '1', district_code: 'MORJ',preq_stock_code: '007478985', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37008', po_item_no: '006',status:  '9', district_code: 'MORJ',preq_stock_code: '007479041', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37008', po_item_no: '007',status:  '9', district_code: 'MORJ',preq_stock_code: '007479074', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37008', po_item_no: '008',status:  '1', district_code: 'MORJ',preq_stock_code: '007479165', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37008', po_item_no: '009',status:  '1', district_code: 'MORJ',preq_stock_code: '007533417', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '9', warehouse_id: 'MB01', curr_qty: '9')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37008', po_item_no: '010',status:  '9', district_code: 'MORJ',preq_stock_code: '007555691', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-12', manifest_po_no: 'N37625',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '14',con_note_date: '2/12/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,	po_no: 'N37625', 	po_type: 'N', 	supplier_no: '011791', 	status: ' ', 	district_code: 'MORJ', 	freight_code: 'N3', 	delivery_location: 'MB01', 	order_date: '02/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37625', po_item_no: '001',status:  '9', district_code: 'MORJ',preq_stock_code: 'AM0956769', unit_of_purch: 'M', unit_of_issue: 'M', orig_qty: '1000', warehouse_id: 'MB01', curr_qty: '1000')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37625', po_item_no: '002',status:  '1', district_code: 'MORJ',preq_stock_code: 'AM0956770', unit_of_purch: 'M', unit_of_issue: 'M', orig_qty: '1000', warehouse_id: 'MB01', curr_qty: '1000')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37625', po_item_no: '003',status:  '9', district_code: 'MORJ',preq_stock_code: 'AM0956771', unit_of_purch: 'M', unit_of_issue: 'M', orig_qty: '1000', warehouse_id: 'MB01', curr_qty: '1000')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-12', manifest_po_no: 'N37655',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '15',con_note_date: '3/12/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,	po_no: 'N37655', 	po_type: 'N', 	supplier_no: '001004', 	status: ' ', 	district_code: 'MORJ', 	freight_code: 'N1', 	delivery_location: 'MB01', 	order_date: '02/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37655', po_item_no: '001',status:  '9', district_code: 'MORJ',preq_stock_code: '000478362', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37655', po_item_no: '002',status:  '1', district_code: 'MORJ',preq_stock_code: '000804260', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37655', po_item_no: '003',status:  '9', district_code: 'MORJ',preq_stock_code: '007510191', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37655', po_item_no: '004',status:  '9', district_code: 'MORJ',preq_stock_code: 'AM0783170', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '250', warehouse_id: 'MB01', curr_qty: '250')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065400', manifest_id: man.id ,con_note: '2128597196-12', manifest_po_no: 'N37728',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '16',con_note_date: '4/12/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id, po_no: 'N37728', 	po_type: 'N', 	supplier_no: '000608', 	status: ' ', 	district_code: 'MORJ', 	freight_code: 'XX', 	delivery_location: 'MB01', 	order_date: '02/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N37728', po_item_no: '001',status:  '1', district_code: 'MORJ',preq_stock_code: '099575001', unit_of_purch: 'SERV', unit_of_issue: 'SERV', orig_qty: '0', warehouse_id: 'MB01', curr_qty: '0')
+poitem.save!
+man = Manifest.create(manifest_no: '19065401', eta_date: '2013-11-17 11:45:00 UTC' ,trailers: '4CF18165')
+man.save!
+manitem = ManifestItem.create(manifest_no: '19065401', manifest_id: '2',con_note: '2128597196-12', manifest_po_no: 'N38034',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '17',con_note_date: '5/12/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,	po_no: 'N38034', 	po_type: 'N', 	supplier_no: '001650', 	status: '9', 	district_code: 'MORJ', 	freight_code: 'N1', 	delivery_location: 'MBEP', 	order_date: '02/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N38034', po_item_no: '001',status:  '9', district_code: 'MORJ',preq_stock_code: '099736001', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '50', warehouse_id: 'MB01', curr_qty: '50')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N38034', po_item_no: '002',status:  '9', district_code: 'MORJ',preq_stock_code: '099736002', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '50', warehouse_id: 'MB01', curr_qty: '50')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065401', manifest_id: '2',con_note: '2128597196-12', manifest_po_no: 'N38099',pallet_description: 'STANDARD',pallet_weight: '500',number_items: '18',con_note_date: '6/12/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,	po_no: 'N38099', 	po_type: 'N', 	supplier_no: '001321', 	status: ' ', 	district_code: 'MORJ', 	freight_code: 'N1', 	delivery_location: 'MBEP', 	order_date: '02/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N38099', po_item_no: '001',status:  '9', district_code: 'MORJ',preq_stock_code: '099754001', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '100', warehouse_id: 'MB01', curr_qty: '100')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N38099', po_item_no: '002',status:  '9', district_code: 'MORJ',preq_stock_code: '099754002', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '100', warehouse_id: 'MB01', curr_qty: '100')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065401', manifest_id: '2',con_note: '2128597196-12', manifest_po_no: 'N38170',pallet_description: 'SMALL',pallet_weight: '1000',number_items: '19',con_note_date: '7/12/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,	po_no: 'N38170', 	po_type: 'N', 	supplier_no: '002157', 	status: ' ', 	district_code: 'MORJ', 	freight_code: 'N1', 	delivery_location: 'MB01', 	order_date: '02/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N38170', po_item_no: '001',status:  '9', district_code: 'MORJ',preq_stock_code: '099798001', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '20', warehouse_id: 'MB01', curr_qty: '20')
+poitem.save!
+manitem = ManifestItem.create(manifest_no: '19065401', manifest_id: '2',con_note: '2128597196-12', manifest_po_no: 'N38249',pallet_description: 'SMALL',pallet_weight: '1000',number_items: '20',con_note_date: '8/12/2013 5:15:31 AM', sender: 'G & S ENGINEERING SERVICES PTY LTD')
+manitem.save!
+po = Purchaseorder.create(manifest_item_id: manitem.id,	po_no: 'N38249', 	po_type: 'N', 	supplier_no: '016852', 	status: '1', 	district_code: 'MORJ', 	freight_code: 'N1', 	delivery_location: 'MB01', 	order_date: '02/11/2013  5:15:31 AM')
+po.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N38249', po_item_no: '001',status:  '1', district_code: 'MORJ',preq_stock_code: '000805531', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '40', warehouse_id: 'MB01', curr_qty: '40')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N38249', po_item_no: '002',status:  '1', district_code: 'MORJ',preq_stock_code: '007206600', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1093', warehouse_id: 'MB01', curr_qty: '1093')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N38249', po_item_no: '003',status:  '1', district_code: 'MORJ',preq_stock_code: '007496805', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '20', warehouse_id: 'MB01', curr_qty: '20')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N38249', po_item_no: '004',status:  '1', district_code: 'MORJ',preq_stock_code: '007496813', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '30', warehouse_id: 'MB01', curr_qty: '30')
+poitem.save!
+poitem = PurchaseorderItem.create(purchaseorder_id: po.id,po_no: 'N38249', po_item_no: '005',status:  '1', district_code: 'MORJ',preq_stock_code: 'AM0956750', unit_of_purch: 'EA', unit_of_issue: 'EA', orig_qty: '1', warehouse_id: 'MB01', curr_qty: '1')
+poitem.save!
