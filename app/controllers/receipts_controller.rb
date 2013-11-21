@@ -25,7 +25,6 @@ class ReceiptsController < ApplicationController
   # GET /receipts/new.json
   def new
     @receipt = Receipt.new
-    @purchaseorder_item = find_by_
 
     respond_to do |format|
       format.html # new.html.erb
