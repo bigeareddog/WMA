@@ -1,61 +1,134 @@
-<h1>Listing purchaseorders</h1>
+<script>
+$(document).ready( function () {
+  $('#example').dataTable( {
+    "sDom": "<'row-fluid'<'span6'T><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+      "oTableTools": {
+        "aButtons": [
+          "copy",
+            "print",
+            {
+              "sExtends":    "collection",
+              "sButtonText": 'Save <span class="caret" />',
+              "aButtons":    [ "csv", "xls", "pdf" ]
+            }
+         ]
+       }
+     } );
+ } );
 
-<table>
-  <tr>
-    <th>Po no</th>
-    <th>Po type</th>
-    <th>Warehouse</th>
-    <th>Supplier no</th>
-    <th>Status</th>
-    <th>District code</th>
-    <th>Freight code</th>
-    <th>Delivery location</th>
-    <th>Order date</th>
-    <th>Creation date</th>
-    <th>Completed date</th>
-    <th>Creation user</th>
-    <th>Order orig</th>
-    <th>Purch officer</th>
-    <th>Owned stk ind</th>
-    <th>Con stock ind</th>
-    <th>Preq item ind</th>
-    <th>Last rcpt no</th>
-    <th>Origin code</th>
-    <th>Manifest item</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
 
-<% @purchaseorders.each do |purchaseorder| %>
-  <tr>
-    <td><%= purchaseorder.po_no %></td>
-    <td><%= purchaseorder.po_type %></td>
-    <td><%= purchaseorder.warehouse_id %></td>
-    <td><%= purchaseorder.supplier_no %></td>
-    <td><%= purchaseorder.status %></td>
-    <td><%= purchaseorder.district_code %></td>
-    <td><%= purchaseorder.freight_code %></td>
-    <td><%= purchaseorder.delivery_location %></td>
-    <td><%= purchaseorder.order_date %></td>
-    <td><%= purchaseorder.creation_date %></td>
-    <td><%= purchaseorder.completed_date %></td>
-    <td><%= purchaseorder.creation_user %></td>
-    <td><%= purchaseorder.order_orig %></td>
-    <td><%= purchaseorder.purch_officer %></td>
-    <td><%= purchaseorder.owned_stk_ind %></td>
-    <td><%= purchaseorder.con_stock_ind %></td>
-    <td><%= purchaseorder.preq_item_ind %></td>
-    <td><%= purchaseorder.last_rcpt_no %></td>
-    <td><%= purchaseorder.origin_code %></td>
-    <td><%= purchaseorder.manifest_item_id %></td>
-    <td><%= link_to 'Show', purchaseorder %></td>
-    <td><%= link_to 'Edit', edit_purchaseorder_path(purchaseorder) %></td>
-    <td><%= link_to 'Destroy', purchaseorder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+</script>
+
+<div class = "container">
+  <div class="page-header" id="banner">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1>Consignment Notes</h1>
+        <p class="lead">Review and manage outstanding Purchase Orders contained in a Consignment Note</p>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Manifest Details</h3>
+    </div>
+
+    <div class="panel-body">
+      <p id="notice"><%= notice %></p>
+
+      <p class="lead">
+        <b>Manifest no:</b>
+        <%= @manifest_item.manifest_no %>
+      </p>
+
+      <p class="lead">
+        <b>Eta date:</b>
+        <%= @manifest_item.con_note %>
+      </p>
+
+      <p class="lead">
+        <b>Trailers:</b>
+        <%= @manifest_item.number_items%>
+      </p>
+
+      <p class="lead">
+        <b>Trailers:</b>
+        <%= @manifest_item.pallet_description%>
+      </p>
+
+      <p class="lead">
+        <b>Trailers:</b>
+        <%= @manifest_item.pallet_weight%>
+      </p>
+  </div>
+</div>
+
+
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Con Notes attached to Manifest</h3>
+  </div>
+  <div class="panel-body">
+    <table id="purchaseorders", cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered"  >
+    <thead>  
+      <tr>
+        <th>Po no</th>
+        <th>Po type</th>
+        <th>Warehouse</th>
+        <th>Supplier no</th>
+        <th>Status</th>
+        <th>District code</th>
+        <th>Freight code</th>
+        <th>Delivery location</th>
+        <th>Order date</th>
+        <th>Creation date</th>
+        <th>Completed date</th>
+        <th>Creation user</th>
+        <th>Order orig</th>
+        <th>Purch officer</th>
+        <th>Owned stk ind</th>
+        <th>Con stock ind</th>
+        <th>Preq item ind</th>
+        <th>Last rcpt no</th>
+        <th>Origin code</th>
+        <th>Manifest item</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>  
+    <% @purchaseorders.each do |purchaseorder| %>
+      <tr>
+        <td><%= purchaseorder.po_no %></td>
+        <td><%= purchaseorder.po_type %></td>
+        <td><%= purchaseorder.warehouse_id %></td>
+        <td><%= purchaseorder.supplier_no %></td>
+        <td><%= purchaseorder.status %></td>
+        <td><%= purchaseorder.district_code %></td>
+        <td><%= purchaseorder.freight_code %></td>
+        <td><%= purchaseorder.delivery_location %></td>
+        <td><%= purchaseorder.order_date %></td>
+        <td><%= purchaseorder.creation_date %></td>
+        <td><%= purchaseorder.completed_date %></td>
+        <td><%= purchaseorder.creation_user %></td>
+        <td><%= purchaseorder.order_orig %></td>
+        <td><%= purchaseorder.purch_officer %></td>
+        <td><%= purchaseorder.owned_stk_ind %></td>
+        <td><%= purchaseorder.con_stock_ind %></td>
+        <td><%= purchaseorder.preq_item_ind %></td>
+        <td><%= purchaseorder.last_rcpt_no %></td>
+        <td><%= purchaseorder.origin_code %></td>
+        <td><%= purchaseorder.manifest_item_id %></td>
+      </tr>
+    <% end %>
+    <tbody>
+    </table>
 
 <br />
+</div>
+</div>
 
 <%= link_to 'New Purchaseorder', new_purchaseorder_path %>

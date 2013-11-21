@@ -21,98 +21,82 @@ $(document).ready( function () {
     <div class="row">
       <div class="col-lg-6">
         <h1>Purchase Order</h1>
-        <p class="lead">Review and receipt outstanding Purchase Orders linked to a Manifest</p>
+        <p class="lead">Review and receipt outstanding Purchase Orders linked to a Consignment Note</p>
       </div>
     </div>
   </div>
 
-<h2> Purchase Order Details </h2> 
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Consignment Note Details</h3>
+    </div>
+    <div class="panel-body">
 
-<p id="notice"><%= notice %></p>
+        <p id="notice"><%= notice %></p>
 
-<p class="lead">
-  <b>Po no:</b>
-  <%= @purchaseorder.po_no %>
-</p>
+        <p class="lead">
+          <b>Po no:</b>
+          <%= @purchaseorder.po_no %>
+        </p>
 
-<p class="lead">
-  <b>Po type:</b>
-  <%= @purchaseorder.po_type %>
-</p>
+        <p class="lead">
+          <b>Po type:</b>
+          <%= @purchaseorder.delivery_location %>
+        </p>
 
-<p class="lead">
-  <b>Warehouse:</b>
-  <%= @purchaseorder.warehouse_id %>
-</p>
+        <p class="lead">
+          <b>Supplier no:</b>
+          <%= @purchaseorder.supplier_no %>
+        </p>
 
-<p class="lead">
-  <b>Supplier no:</b>
-  <%= @purchaseorder.supplier_no %>
-</p>
+        <p class="lead">
+          <b>Status:</b>
+          <%= @purchaseorder.warehouse_id %>
+        </p>
 
-<p class="lead">
-  <b>Status:</b>
-  <%= @purchaseorder.status %>
-</p>
-
-<p class="lead">
-  <b>District code:</b>
-  <%= @purchaseorder.district_code %>
-</p>
-
-<p class="lead">
-  <b>Freight code:</b>
-  <%= @purchaseorder.freight_code %>
-</p>
-
-<p class="lead">
-  <b>Delivery location:</b>
-  <%= @purchaseorder.delivery_location %>
-</p>
-
-<p class="lead">
-  <b>Order date:</b>
-  <%= @purchaseorder.order_date %>
-</p>
-
-<p class="lead">
-  <b>Last rcpt no:</b>
-  <%= @purchaseorder.last_rcpt_no %>
-</p>
-
-<h2> Purchase Order Items </h2>
+        <p class="lead">
+          <b>District code:</b>
+          <%= @purchaseorder.district_code %>
+        </p>
+    </div>
+  </div>
 
 
-<table id="purchaseorders", cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered"  >
- <thead>     
-  <tr>
-    <th>Po item no</th>
-    <th>District code</th>
-    <th>Stock code</th>
-    <th>Unit of issue</th>
-    <th>Warehouse</th>
-    <th>Order Qty</th>
-    <th>PO Action</th>
-    <th>Action</th>
-  </tr>
- </thead>
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Purchase Order Items</h3>
+    </div>
+    <div class="panel-body">
+        <table id="purchaseorderitems", cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered"  >
+         <thead>     
+          <tr>
+            <th>Po item no</th>
+            <th>District code</th>
+            <th>Stock code</th>
+            <th>Unit of issue</th>
+            <th>Warehouse</th>
+            <th>Order Qty</th>
+            <th>PO Action</th>
+            <th>Action</th>
+          </tr>
+         </thead>
 
-<tbody>
- <% @purchaseorder_items.each do |purchaseorder_item| %>
-  <tr>
-    <td><%= purchaseorder_item.po_item_no %></td>
-    <td><%= purchaseorder_item.district_code %></td>
-    <td><%= purchaseorder_item.preq_stock_code %></td>
-    <td><%= purchaseorder_item.unit_of_issue %></td>
-    <td><%= purchaseorder_item.warehouse_id %></td>
-    <td><%= purchaseorder_item.curr_qty %></td>
-    <td><%=link_to "Receipt", new_receipt_path, class: "btn btn-large btn-success" %></td> 
-
-    <td><%= link_to 'Show', purchaseorder_item,class: "btn btn-large btn-primary"  %></td>
-  </tr>
- </tbody>
-<% end %>
-</table>
-<%= link_to 'Edit', edit_purchaseorder_path(@purchaseorder) %> |
-<%= link_to 'Back', purchaseorders_path %>
+        <tbody>
+         <% @purchaseorder_items.each do |purchaseorder_item| %>
+          <tr>
+            <td><%= purchaseorder_item.po_item_no %></td>
+            <td><%= purchaseorder_item.district_code %></td>
+            <td><%= purchaseorder_item.preq_stock_code %></td>
+            <td><%= purchaseorder_item.unit_of_issue %></td>
+            <td><%= purchaseorder_item.warehouse_id %></td>
+            <td><%= purchaseorder_item.curr_qty %></td>
+            <td><%=link_to "Receipt", new_receipt_path, class: "btn btn-large btn-success" %></td> 
+            <td><%= link_to 'Show', purchaseorder_item,class: "btn btn-large btn-primary"  %></td>
+          </tr>
+         </tbody>
+        <% end %>
+        </table>
+        <%= link_to 'Back', manifests_path %>
+      </div>
+  </div>
 </div>

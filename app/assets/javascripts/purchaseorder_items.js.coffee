@@ -3,5 +3,5 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 #
 jQuery ->
-        $('#purchaseorders').dataTable()
+        $('#purchaseorderitems').dataTable()
 	bjQueryUI: true

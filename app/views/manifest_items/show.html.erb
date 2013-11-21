@@ -1,60 +1,113 @@
-<p id="notice"><%= notice %></p>
+<script>
+$(document).ready( function () {
+  $('#example').dataTable( {
+    "sDom": "<'row-fluid'<'span6'T><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+      "oTableTools": {
+        "aButtons": [
+          "copy",
+            "print",
+            {
+              "sExtends":    "collection",
+              "sButtonText": 'Save <span class="caret" />',
+              "aButtons":    [ "csv", "xls", "pdf" ]
+            }
+         ]
+       }
+     } );
+ } );
 
-<p>
-  <b>Manifest no:</b>
-  <%= @manifest_item.manifest_no %>
-</p>
 
-<p>
-  <b>Con note:</b>
-  <%= @manifest_item.con_note %>
-</p>
+</script>
 
-<p>
-  <b>Organisation:</b>
-  <%= @manifest_item.organisation %>
-</p>
+<div class = "container">
+  <div class="page-header" id="banner">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1>Consignment Notes</h1>
+        <p class="lead">Review and manage outstanding purchase orders contained in a Consignment Note</p>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Consignment Note Details</h3>
+    </div>
+    <div class="panel-body">
+        <p id="notice"><%= notice %></p>
+        <p>
+          <b>Manifest no:</b>
+          <%= @manifest_item.manifest_no %>
+        </p>
+        <p>
+          <b>Con note:</b>
+          <%= @manifest_item.con_note %>
+        </p>
+        <p>
+          <b>Con note date:</b>
+          <%= @manifest_item.con_note_date %>
+        </p>
+        <p>
+          <b>Sender:</b>
+          <%= @manifest_item.sender %>
+        </p>
+        <p>
+          <b>Number items:</b>
+          <%= @manifest_item.number_items %>
+        </p>
+        <p>
+          <b>Pallet description:</b>
+          <%= @manifest_item.pallet_description %>
+        </p>
+        <p>
+          <b>Pallet weight:</b>
+          <%= @manifest_item.pallet_weight %>
+        </p>
+        <p>
+          <b>Manifest po no:</b>
+          <%= @manifest_item.manifest_po_no %>
+        </p>
+      </div>
+    </div>
 
-<p>
-  <b>Con note date:</b>
-  <%= @manifest_item.con_note_date %>
-</p>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">Purchase Orders attached to Consignment Note</h3>
+  </div>
+  <div class="panel-body">
+    <table id="purchaseorders", cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered"  >
+    <thead>  
+      <tr>
+        <th>Po no</th>
+        <th>Type</th>
+        <th>Warehouse</th>
+        <th>Supplier no</th>
+        <th>Status</th>
+        <th>District</th>
+        <th>Freight code</th>
+        <th>Delivery location</th>
+        <th></th>
+      </tr>
+    </thead>
 
-<p>
-  <b>Sender:</b>
-  <%= @manifest_item.sender %>
-</p>
-
-<p>
-  <b>Receiver:</b>
-  <%= @manifest_item.receiver %>
-</p>
-
-<p>
-  <b>Number items:</b>
-  <%= @manifest_item.number_items %>
-</p>
-
-<p>
-  <b>Pallet description:</b>
-  <%= @manifest_item.pallet_description %>
-</p>
-
-<p>
-  <b>Pallet weight:</b>
-  <%= @manifest_item.pallet_weight %>
-</p>
-
-<p>
-  <b>Manifest po no:</b>
-  <%= @manifest_item.manifest_po_no %>
-</p>
-
-<p>
-  <b>Manifest:</b>
-  <%= @manifest_item.manifest_id %>
-</p>
-
+    <tbody>  
+    <% @purchaseorders.each do |purchaseorder| %>
+      <tr>
+        <td><%= purchaseorder.po_no %></td>
+        <td><%= purchaseorder.po_type %></td>
+        <td><%= purchaseorder.warehouse_id %></td>
+        <td><%= purchaseorder.supplier_no %></td>
+        <td><%= purchaseorder.status %></td>
+        <td><%= purchaseorder.district_code %></td>
+        <td><%= purchaseorder.freight_code %></td>
+        <td><%= purchaseorder.delivery_location %></td>
+        <td><%= link_to 'Show', purchaseorder,class: "btn btn-large btn-primary"  %></td>
+      </tr>
+    <tbody>
+    <% end %>
+    </table>
+   </div>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_manifest_item_path(@manifest_item) %> |
 <%= link_to 'Back', manifest_items_path %>

@@ -14,7 +14,7 @@ class ManifestItemsController < ApplicationController
   # GET /manifest_items/1.json
   def show
     @manifest_item = ManifestItem.find(params[:id])
-
+    @purchaseorders = @manifest_item.purchaseorders.paginate(page: params[:page])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @manifest_item }

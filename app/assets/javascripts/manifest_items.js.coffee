@@ -4,3 +4,4 @@
 jQuery ->
         $('#manifests').dataTable()
 	bjQueryUI: true
+
