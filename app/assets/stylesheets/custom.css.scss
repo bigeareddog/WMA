@@ -1707,6 +1707,14 @@ th {
   text-align: left;
 }
 
+thead {
+    font-size: 20px;
+}
+
+td {
+    font-size: 30px;
+}
+
 .table {
   width: 100%;
   margin-bottom: 21px;
@@ -1722,6 +1730,7 @@ th {
   line-height: 1.428571429;
   vertical-align: top;
   border-top: 1px solid #ecf0f1;
+  font-size: 18px;
 }
 
 .table > thead > tr > th {

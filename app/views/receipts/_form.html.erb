@@ -1,4 +1,4 @@
-<div class = "container">
+<div class="container">
   <div class="page-header" id="banner">
     <div class="row">
       <div class="col-lg-6">
@@ -12,9 +12,10 @@
   	<div class = "well">
       <%= form_for(@receipt) do |f| %>
         <% if @receipt.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(@receipt.errors.count, "error") %> prohibited this receipt from being saved:</h2>
-
+          <div class="alert alert-dismissable alert-danger">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <h2><%= pluralize(@receipt.errors.count, "error") %> prohibited this receipt from being saved:</h2>
+          </div>
             <ul>
             <% @receipt.errors.full_messages.each do |msg| %>
               <li><%= msg %></li>
@@ -22,34 +23,35 @@
             </ul>
           </div>
         <% end %>
-
+        
         <div class="field">
           <%= f.label :stock_code %><br />
-          <%= f.text_field :stock_code,:readonly => true,:class => "input-small" %>
+          <%= f.text_field :stock_code,:readonly => true,:class => "form-control", id: "inputDefault"  %>
+
         </div>
-          <div class="field">
+        <div class="field">
           <%= f.label :part_no %><br />
-          <%= f.text_field :part_no,:readonly => true, :class => "input-small" %>
+          <%= f.text_field :part_no,:readonly => true, :class => "form-control", id: "inputDefault"  %>
         </div> 
         <div class="field">
           <%= f.label :description %><br />
-          <%= f.text_field :description,:readonly => true, :class => "input-xlarge"  %>
+          <%= f.text_field :description,:readonly => true, :class => "form-control", id: "inputDefault"  %>
         </div>
         <div class="field">
           <%= f.label :bin_location %><br />
-          <%= f.text_field :bin_location,:class => "input-small"  %>
+          <%= f.text_field :bin_location,:class => "form-control", id: "inputDefault"  %>
         </div>
         <div class="field">
           <%= f.label :receipt_ref %><br />
-          <%= f.text_field :receipt_ref, :class => "input-small"  %>
+          <%= f.text_field :receipt_ref, :class => "form-control", id: "inputDefault"  %>
         </div>
         <div class="field">
-          <%= f.label :oum %><br />
-          <%= f.text_field :oum, :class => "input-small"  %>
+          <%= f.label :oum, "OUM" %><br />
+          <%= f.text_field :oum, :class => "form-control", id: "inputDefault" %>
         </div>
         <div class="field">
           <%= f.label :label_qty, "Qty Received" %><br />
-          <%= f.number_field :label_qty, :class => "input-small"  %>
+          <%= f.number_field :label_qty, :class => "form-control", id: "inputDefault"  %>
         </div>
         <div class="field">
           <%= f.label :complete_order %><br />
@@ -59,6 +61,5 @@
           <%= f.submit :class => "btn btn-large btn-success" %>
         </div>
        <% end %>
-    </div>
   </div>
 </div>
