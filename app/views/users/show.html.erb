@@ -16,19 +16,25 @@
     				</aside>
 	 				</div>
 				<div>
+
 				 <h3>
-	 		     	This is the Angloamerican Warehouse Application home page. You have access to the following applications:
+	 		     	Welcome to the Angloamerican Warehouse Application home page. You have access to the following applications:
 	 		     </h3>
 				</div>
-				<div>
-					<h2>Manifests</h2>	
-					<%= link_to "Details", manifests_path, class: "btn btn-large btn-primary" %> 
+				<div class="page-header" id="banner">
+					<div class="row">
+				    	<div class="col-lg-6">
+							<h2>Manifests</h2>	
+							<%= link_to "Details", manifests_path, type: "button" ,class: "btn btn-primary btn-lg" %> 
+						</div>
+					</div>
 				</div>
 				<div>
 					<h2>Receipt Review</h2>	
-					<%= link_to "Details", receipts_path, class: "btn btn-large btn-primary" %> 
+					<%= link_to "Details", receipts_path, type: "button" ,class: "btn btn-primary btn-lg" %> 
 				</div>
 		</div>
  	</div>
  </div>
 </div>
+

@@ -16,57 +16,66 @@ $(document).ready( function () {
      } );
  } );
 </script>
+<div class = "container">
+  <div class="page-header" id="banner">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1>Purchase Order</h1>
+        <p class="lead">Review and receipt outstanding Purchase Orders linked to a Manifest</p>
+      </div>
+    </div>
+  </div>
 
 <h2> Purchase Order Details </h2> 
 
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="lead">
   <b>Po no:</b>
   <%= @purchaseorder.po_no %>
 </p>
 
-<p>
+<p class="lead">
   <b>Po type:</b>
   <%= @purchaseorder.po_type %>
 </p>
 
-<p>
+<p class="lead">
   <b>Warehouse:</b>
   <%= @purchaseorder.warehouse_id %>
 </p>
 
-<p>
+<p class="lead">
   <b>Supplier no:</b>
   <%= @purchaseorder.supplier_no %>
 </p>
 
-<p>
+<p class="lead">
   <b>Status:</b>
   <%= @purchaseorder.status %>
 </p>
 
-<p>
+<p class="lead">
   <b>District code:</b>
   <%= @purchaseorder.district_code %>
 </p>
 
-<p>
+<p class="lead">
   <b>Freight code:</b>
   <%= @purchaseorder.freight_code %>
 </p>
 
-<p>
+<p class="lead">
   <b>Delivery location:</b>
   <%= @purchaseorder.delivery_location %>
 </p>
 
-<p>
+<p class="lead">
   <b>Order date:</b>
   <%= @purchaseorder.order_date %>
 </p>
 
-<p>
+<p class="lead">
   <b>Last rcpt no:</b>
   <%= @purchaseorder.last_rcpt_no %>
 </p>
@@ -106,3 +115,4 @@ $(document).ready( function () {
 </table>
 <%= link_to 'Edit', edit_purchaseorder_path(@purchaseorder) %> |
 <%= link_to 'Back', purchaseorders_path %>
+</div>

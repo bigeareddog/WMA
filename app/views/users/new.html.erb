@@ -1,24 +1,42 @@
-<% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
-
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(@user) do |f| %>
-        <%= render 'shared/error_messages' %>
-
-        <%= f.label :name %>
-        <%= f.text_field :name %>
-
-        <%= f.label :email %>
-        <%= f.text_field :email %>
-
-        <%= f.label :password %>
-        <%= f.password_field :password %>
-
-        <%= f.label :password_confirmation, "Confirmation" %>
-        <%= f.password_field :password_confirmation %>
-
-        <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
-    <% end %>
+<div class = "container">
+  <div class="page-header" id="banner">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1>User Sign Up</h1>
+        <p class="lead">Sign up for a new account</p>
+      </div>
+    </div>
   </div>
+
+    <div class="col-lg-6">
+        <div class = "well">  
+            <%= form_for(@user) do |f| %>
+                <%= render 'shared/error_messages' %>
+
+                <div class="field">
+                    <%= f.label :name %><br />
+                    <%= f.text_field :name, :class => "input-small" %>
+                </div>
+                
+                <div class="field">
+                    <%= f.label :email %><br />
+                    <%= f.text_field :email, :class => "input-xlarge" %>
+                </div>
+                
+                <div class="field">
+                    <%= f.label :password %><br />
+                    <%= f.password_field :password, :class => "input-small" %>
+                </div>
+                
+                <div class="field">
+                    <%= f.label :password_confirmation, "Confirmation" %><br />
+                    <%= f.password_field :password_confirmation, :class => "input-small" %>
+                </div>
+                
+                <div class="actions">
+                    <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+                </div>
+            <% end %>
+        </div>
+    </div>
 </div>
