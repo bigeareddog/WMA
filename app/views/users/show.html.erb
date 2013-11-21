@@ -34,6 +34,26 @@
                 </a>
               </div>
             </div>
+            <div class="form-group">
+                  <label class="control-label">Quick Launch</label>
+                  <div class="input-group">
+                    <span class="input-group-addon">Manifest Number:</span>
+                     <%= form_for(:manifest) do |f| %>
+                     	<%= f.text_field :@manifest_no, class: "form-control" %>
+                     <% end %>
+                    <span class="input-group-btn">
+                    	<<%= link_to "Go", manifest_path, class: "btn btn-default"%> 
+                    </span>
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon">Purchase Order:</span>
+                     <%= form_for(:purchaseorder) do |f| %>
+                     	<%= f.text_field :@po_no, class: "form-control" %>
+                     <% end %>
+                    <span class="input-group-btn">
+                    	<<%= link_to "Go", purchaseorder_path, class: "btn btn-default"%> 
+                    </span>
+                </div>
 		</div>
  	</div>
  </div>

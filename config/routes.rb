@@ -8,6 +8,12 @@ NotForProfit::Application.routes.draw do
 
   resources :purchaseorders
 
+  resources :purchaseorders do
+    member do 
+        get 'find'
+    end
+  end
+
 
   resources :manifest_items
 

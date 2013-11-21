@@ -22,6 +22,16 @@ class PurchaseordersController < ApplicationController
     end
   end
 
+  # GET /purchaseorders/1 (by Purchase order number)
+  # GET /purchaseorders/1.json
+  def find
+    @purchaseorder = Purchaseorder.find_by_po_no(params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @purchaseorder }
+    end
+  end
+
   # GET /purchaseorders/new
   # GET /purchaseorders/new.json
   def new
