@@ -1783,121 +1783,361 @@ if (!po.nil?)
 	poitem.save
 end
 poitem = PurchaseorderItem.create(po_no: 'N39025',po_item_no: '005',status: '1',district_code: 'MORJ',preq_stock_code: '100082005', unit_of_purch: 'EACH', unit_of_issue: 'EACH'	, orig_qty: '150', warehouse_id:'MB01',curr_qty: '150')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39025',po_item_no: '006',status: '9',district_code: 'MORJ',preq_stock_code: '100082006', unit_of_purch: 'EACH', unit_of_issue: 'EACH'	, orig_qty: '100', warehouse_id:'MB01',curr_qty: '100')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39070',po_item_no: '001',status: '9',district_code: 'MORJ',preq_stock_code: '100189001', unit_of_purch: 'BX', unit_of_issue: 'BX'	, orig_qty: '10', warehouse_id:'MB01',curr_qty: '10')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39070',po_item_no: '002',status: '9',district_code: 'MORJ',preq_stock_code: '100189002', unit_of_purch: 'BX', unit_of_issue: 'BX'	, orig_qty: '15', warehouse_id:'MB01',curr_qty: '15')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39070',po_item_no: '003',status: '9',district_code: 'MORJ',preq_stock_code: '100189003', unit_of_purch: 'PK', unit_of_issue: 'PK'	, orig_qty: '10', warehouse_id:'MB01',curr_qty: '10')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39076',po_item_no: '001',status: '9',district_code: 'MORJ',preq_stock_code: '000706259', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '1', warehouse_id:'MB01',curr_qty: '1')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39076',po_item_no: '002',status: '9',district_code: 'MORJ',preq_stock_code: '007268345', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '87', warehouse_id:'MB01',curr_qty: '87')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39076',po_item_no: '003',status: '9',district_code: 'MORJ',preq_stock_code: '007285455', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '1', warehouse_id:'MB01',curr_qty: '1')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39076',po_item_no: '004',status: '9',district_code: 'MORJ',preq_stock_code: '007298193', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '1', warehouse_id:'MB01',curr_qty: '1')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39076',po_item_no: '005',status: '9',district_code: 'MORJ',preq_stock_code: '007348345', unit_of_purch: 'PACK', unit_of_issue: 'BOX'	, orig_qty: '1', warehouse_id:'MB01',curr_qty: '1')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39076',po_item_no: '006',status: '9',district_code: 'MORJ',preq_stock_code: '007549173', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '2', warehouse_id:'MB01',curr_qty: '2')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39079',po_item_no: '001',status: '9',district_code: 'MORJ',preq_stock_code: '007278351', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '2', warehouse_id:'MB01',curr_qty: '2')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39079',po_item_no: '002',status: '1',district_code: 'MORJ',preq_stock_code: '007282494', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '2', warehouse_id:'MB01',curr_qty: '2')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39079',po_item_no: '003',status: '9',district_code: 'MORJ',preq_stock_code: '007376452', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '2', warehouse_id:'MB01',curr_qty: '2')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39085',po_item_no: '001',status: '9',district_code: 'MORJ',preq_stock_code: 'AM0840118', unit_of_purch: 'EA', unit_of_issue: 'PAIR'	, orig_qty: '1', warehouse_id:'MB01',curr_qty: '1')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39086',po_item_no: '001',status: '9',district_code: 'MORJ',preq_stock_code: 'AM0855705', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '84', warehouse_id:'MB01',curr_qty: '84')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39089',po_item_no: '001',status: '9',district_code: 'MORJ',preq_stock_code: '000208642', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '48', warehouse_id:'MB01',curr_qty: '48')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39089',po_item_no: '002',status: '9',district_code: 'MORJ',preq_stock_code: '007205180', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '44', warehouse_id:'MB01',curr_qty: '44')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39089',po_item_no: '003',status: '1',district_code: 'MORJ',preq_stock_code: '007206568', unit_of_purch: 'PACK', unit_of_issue: 'PACK'	, orig_qty: '1', warehouse_id:'MB01',curr_qty: '1')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39089',po_item_no: '004',status: '9',district_code: 'MORJ',preq_stock_code: '007221559', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '12', warehouse_id:'MB01',curr_qty: '12')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39090',po_item_no: '001',status: '9',district_code: 'MORJ',preq_stock_code: '000408101', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '1', warehouse_id:'MB01',curr_qty: '1')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39090',po_item_no: '002',status: '9',district_code: 'MORJ',preq_stock_code: '000506361', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '11', warehouse_id:'MB01',curr_qty: '11')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39090',po_item_no: '003',status: '1',district_code: 'MORJ',preq_stock_code: 'AM0875945', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '5', warehouse_id:'MB01',curr_qty: '5')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39091',po_item_no: '001',status: '1',district_code: 'MORJ',preq_stock_code: '000408296', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '2', warehouse_id:'MB01',curr_qty: '2')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39091',po_item_no: '002',status: '9',district_code: 'MORJ',preq_stock_code: '000714824', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '1', warehouse_id:'MB01',curr_qty: '1')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39091',po_item_no: '003',status: '9',district_code: 'MORJ',preq_stock_code: '007429319', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '1', warehouse_id:'MB01',curr_qty: '1')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39091',po_item_no: '004',status: '1',district_code: 'MORJ',preq_stock_code: '007478860', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '2', warehouse_id:'MB01',curr_qty: '2')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39091',po_item_no: '005',status: '1',district_code: 'MORJ',preq_stock_code: '007478985', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '7', warehouse_id:'MB01',curr_qty: '7')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39091',po_item_no: '006',status: '9',district_code: 'MORJ',preq_stock_code: '007478993', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '2', warehouse_id:'MB01',curr_qty: '2')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39091',po_item_no: '007',status: '9',district_code: 'MORJ',preq_stock_code: '007479108', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '2', warehouse_id:'MB01',curr_qty: '2')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39091',po_item_no: '008',status: '1',district_code: 'MORJ',preq_stock_code: 'AM0942312', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '10', warehouse_id:'MB01',curr_qty: '10')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39109',po_item_no: '001',status: '9',district_code: 'MORJ',preq_stock_code: '000300184', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '8', warehouse_id:'MB01',curr_qty: '8')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39109',po_item_no: '002',status: '9',district_code: 'MORJ',preq_stock_code: '000402576', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '10', warehouse_id:'MB01',curr_qty: '10')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39109',po_item_no: '003',status: '9',district_code: 'MORJ',preq_stock_code: '000872219', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '8', warehouse_id:'MB01',curr_qty: '8')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39109',po_item_no: '004',status: '9',district_code: 'MORJ',preq_stock_code: '007230295', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '14', warehouse_id:'MB01',curr_qty: '14')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39109',po_item_no: '005',status: '1',district_code: 'MORJ',preq_stock_code: '007298235', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '1', warehouse_id:'MB01',curr_qty: '1')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39109',po_item_no: '006',status: '1',district_code: 'MORJ',preq_stock_code: '007473614', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '4', warehouse_id:'MB01',curr_qty: '4')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39109',po_item_no: '007',status: '1',district_code: 'MORJ',preq_stock_code: '007473622', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '4', warehouse_id:'MB01',curr_qty: '4')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39109',po_item_no: '008',status: '9',district_code: 'MORJ',preq_stock_code: '007475023', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '11', warehouse_id:'MB01',curr_qty: '11')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39109',po_item_no: '009',status: '9',district_code: 'MORJ',preq_stock_code: 'AM0791089', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '2', warehouse_id:'MB01',curr_qty: '2')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39122',po_item_no: '001',status: '9',district_code: 'MORJ',preq_stock_code: 'AM0782920', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '1', warehouse_id:'MB01',curr_qty: '1')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39122',po_item_no: '002',status: '9',district_code: 'MORJ',preq_stock_code: 'AM0782953', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '50', warehouse_id:'MB01',curr_qty: '50')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39136',po_item_no: '001',status: '9',district_code: 'MORJ',preq_stock_code: '100139001', unit_of_purch: 'SERV', unit_of_issue: 'SERV'	, orig_qty: '0', warehouse_id:'MB01',curr_qty: '0')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39137',po_item_no: '001',status: '9',district_code: 'MORJ',preq_stock_code: '100211001', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '8', warehouse_id:'MB01',curr_qty: '8')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39149',po_item_no: '001',status: '9',district_code: 'MORJ',preq_stock_code: '000069567', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '4', warehouse_id:'MB01',curr_qty: '4')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39149',po_item_no: '002',status: '9',district_code: 'MORJ',preq_stock_code: '000216098', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '36', warehouse_id:'MB01',curr_qty: '36')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39149',po_item_no: '003',status: '9',district_code: 'MORJ',preq_stock_code: '000245360', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '9', warehouse_id:'MB01',curr_qty: '9')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39149',po_item_no: '004',status: '9',district_code: 'MORJ',preq_stock_code: '000400320', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '4', warehouse_id:'MB01',curr_qty: '4')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39149',po_item_no: '005',status: '9',district_code: 'MORJ',preq_stock_code: '000403914', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '24', warehouse_id:'MB01',curr_qty: '24')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39149',po_item_no: '006',status: '9',district_code: 'MORJ',preq_stock_code: '000408728', unit_of_purch: 'PAIR', unit_of_issue: 'EA'	, orig_qty: '200', warehouse_id:'MB01',curr_qty: '200')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39157',po_item_no: '001',status: '9',district_code: 'MORJ',preq_stock_code: '000802033', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '1', warehouse_id:'MB01',curr_qty: '1')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39157',po_item_no: '002',status: '9',district_code: 'MORJ',preq_stock_code: '000882850', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '2', warehouse_id:'MB01',curr_qty: '2')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39157',po_item_no: '003',status: '9',district_code: 'MORJ',preq_stock_code: '007266109', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '1', warehouse_id:'MB01',curr_qty: '1')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39157',po_item_no: '004',status: '9',district_code: 'MORJ',preq_stock_code: '007380934', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '1', warehouse_id:'MB01',curr_qty: '1')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39162',po_item_no: '001',status: '1',district_code: 'MORJ',preq_stock_code: '007234651', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '447', warehouse_id:'MB01',curr_qty: '447')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39162',po_item_no: '002',status: '1',district_code: 'MORJ',preq_stock_code: '007261878', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '200', warehouse_id:'MB01',curr_qty: '200')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39162',po_item_no: '003',status: '1',district_code: 'MORJ',preq_stock_code: '007320187', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '52', warehouse_id:'MB01',curr_qty: '52')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39162',po_item_no: '004',status: '1',district_code: 'MORJ',preq_stock_code: '007320195', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '16', warehouse_id:'MB01',curr_qty: '16')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'N39162',po_item_no: '005',status: '1',district_code: 'MORJ',preq_stock_code: 'AM0880285', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '201', warehouse_id:'MB01',curr_qty: '201')
-
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save
+end
 poitem = PurchaseorderItem.create(po_no: 'RJ0313',po_item_no: '001',status: '1',district_code: 'MORJ',preq_stock_code: '007308208', unit_of_purch: 'EA', unit_of_issue: 'EA'	, orig_qty: '30', warehouse_id:'MB01',curr_qty: '60')
+po = Purchaseorder.find_by_po_no poitem.po_no
+if (!po.nil?)
+	poitem.purchaseorder_id = po.id
+	poitem.save

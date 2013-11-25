@@ -19,13 +19,10 @@ $(document).ready( function () {
 
 </script>
 <div class = "container">
-  <div class="page-header" id="banner">
-    <div class="row">
-      <div class="col-lg-6">
+  <div class="bs-example">
+        <%= link_to image_tag("Anglo-logo-home.gif", alt: "Angloamerican"), "http://www.angloamerican.com.au" %>
         <h1>Consignment Notes</h1>
         <p class="lead">Review and manage outstanding Consignment Notes contained in a Manifest</p>
-      </div>
-    </div>
   </div>
   <div class="panel panel-info">
     <div class="panel-heading">
@@ -53,7 +50,7 @@ $(document).ready( function () {
               <tr>
                 <td><%= manifest_item.manifest_no %></td>
                 <td><%= manifest_item.con_note %></td>
-                <td><%= manifest_item.con_note_date %></td>
+                <td><%= manifest_item.con_note_date.strftime "%d/%m/%Y" %></td>
                 <td><%= manifest_item.sender %></td>
                 <td><%= manifest_item.number_items %></td>
                 <td><%= manifest_item.pallet_description %></td>

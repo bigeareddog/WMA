@@ -20,51 +20,59 @@ $(document).ready( function () {
 </script>
 
 <div class = "container">
-  <div class="page-header" id="banner">
-    <div class="row">
-      <div class="col-lg-6">
-        <h1>Consignment Notes</h1>
-        <p class="lead">Review and manage outstanding Purchase Orders contained in a Consignment Note</p>
-      </div>
+
+  <div class="row">
+    <div class="col-md-4 center">
+        <h3>Manifest Details: </h3>
+    </div>
+    <div class="col-md-8 center">
+        <p class="lead">Manifest Details: Review and manage outstanding consignment notes contained in a delivery manifest</p>
     </div>
   </div>
+
   <div class="panel panel-info">
     <div class="panel-heading">
       <h3 class="panel-title">Consignment Note Details</h3>
     </div>
     <div class="panel-body">
         <p id="notice"><%= notice %></p>
-        <p>
-          <b>Manifest no:</b>
-          <%= @manifest_item.manifest_no %>
+        <p class="lead">
+         <div class="col-md-4"> 
+            <b>Manifest no:</b>
+            <%= @manifest_item.manifest_no %>
+          </div>
+          <div class="col-md-4"> 
+            <b>Con note:</b>
+            <%= @manifest_item.con_note %>
+          </div>
+          <div class="col-md-4"> 
+            <b>Con note date:</b>
+            <%= @manifest_item.con_note_date.strftime "%d/%m/%Y" %>
+          </div>
         </p>
-        <p>
-          <b>Con note:</b>
-          <%= @manifest_item.con_note %>
+        <p class="lead">
+          <div class="col-md-4 center"> 
+            <b>Sender:</b>   
+            <%= @manifest_item.sender %>
+          </div>
+          <div class="col-md-4 center">           
+            <b>Number items:</b>
+            <%= @manifest_item.number_items %>
+          </div>
+          <div class="col-md-4 center"> 
+            <b>Pallet description:</b>
+            <%= @manifest_item.pallet_description %>
+          </div>
         </p>
-        <p>
-          <b>Con note date:</b>
-          <%= @manifest_item.con_note_date %>
-        </p>
-        <p>
-          <b>Sender:</b>
-          <%= @manifest_item.sender %>
-        </p>
-        <p>
-          <b>Number items:</b>
-          <%= @manifest_item.number_items %>
-        </p>
-        <p>
-          <b>Pallet description:</b>
-          <%= @manifest_item.pallet_description %>
-        </p>
-        <p>
-          <b>Pallet weight:</b>
-          <%= @manifest_item.pallet_weight %>
-        </p>
-        <p>
-          <b>Manifest po no:</b>
-          <%= @manifest_item.manifest_po_no %>
+        <p class="lead">
+          <div class="col-md-4 center"> 
+            <b>Pallet weight:</b>
+            <%= @manifest_item.pallet_weight %>
+          </div>
+          <div class="col-md-4 center"> 
+            <b>Manifest po no:</b>
+            <%= @manifest_item.manifest_po_no %>
+          </div>
         </p>
       </div>
     </div>
@@ -100,7 +108,7 @@ $(document).ready( function () {
         <td><%= purchaseorder.district_code %></td>
         <td><%= purchaseorder.freight_code %></td>
         <td><%= purchaseorder.delivery_location %></td>
-        <td><%= link_to 'Show', purchaseorder,class: "btn btn-large btn-primary"  %></td>
+        <td><%= link_to 'Show', purchaseorder,class: "btn btn-primary btn-sm"  %></td>
       </tr>
     <tbody>
     <% end %>

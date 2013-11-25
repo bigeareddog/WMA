@@ -20,12 +20,12 @@ $(document).ready( function () {
 </script>
 
 <div class = "container">
-  <div class="page-header" id="banner">
-    <div class="row">
-      <div class="col-lg-6">
-        <h1>Consignment Notes</h1>
+  <div class="row">
+    <div class="col-md-6 center">
+        <h3>Manifest Details: </h3>
+    </div>
+    <div class="col-md-6 center">
         <p class="lead">Review and manage outstanding consignment notes contained in a delivery manifest</p>
-      </div>
     </div>
   </div>
   <div class="panel panel-info">
@@ -34,18 +34,11 @@ $(document).ready( function () {
     </div>
     <div class="panel-body">
       <p id="notice"><%= notice %></p>
-
       <p class="lead">
         <b>Manifest no:</b>
         <%= @manifest.manifest_no %>
-      </p>
-
-      <p class="lead">
         <b>Eta date:</b>
-        <%= @manifest.eta_date %>
-      </p>
-
-      <p class="lead">
+        <%= @manifest.eta_date.strftime "%d/%m/%Y" %>
         <b>Trailers:</b>
         <%= @manifest.trailers %>
       </p>
@@ -64,7 +57,7 @@ $(document).ready( function () {
           <th>C/N Date</td>
           <th>Sender</th>
           <th>Items</th>
-          <th>Pallet</th>
+          <th>Desc</th>
           <th>Weight</th>
           <th>Action</th>
         </tr>
@@ -74,12 +67,12 @@ $(document).ready( function () {
       <% @manifest_items.each do |manifest_item| %>
         <tr>
           <td><%= manifest_item.con_note %></td>
-          <td><%= manifest_item.con_note_date %></td>
+          <td><%= manifest_item.con_note_date.strftime "%d/%m/%Y"%></td>
           <td><%= manifest_item.sender %></td>
           <td><%= manifest_item.number_items %></td>
           <td><%= manifest_item.pallet_description %></td>
           <td><%= manifest_item.pallet_weight %></td>
-          <td><%= link_to 'Show', manifest_item,class: "btn btn-large btn-primary"  %></td>
+          <td><%= link_to 'Show', manifest_item,class: "btn btn-primary btn-sm"%></td>
        </tr>
        </tbody>
        <% end %>

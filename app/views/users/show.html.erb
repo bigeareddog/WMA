@@ -1,61 +1,39 @@
-<div class="page-header" id="banner">
-	<div class="row">
-		<div class="col-lg-6">
-			<h1 id="container"></h1>
-				<div class="jumbotron">
-    			<h1 id="forms">Home Page</h1>           
-					<% provide(:title, @user.name) %>
-					<div class="row">
-		  			<aside class="span4">
-    					<section>
-      					<h2>
-       						<%= gravatar_for @user %>
-      	 			  		<%= @user.name %>
-     					</h2>
-   			 			</section>
-    				</aside>
-	 				</div>
-				<div>
-				 <h3>
-	 		     	Welcome to the Angloamerican Warehouse Application home page. 
-	 		     </h3>
-				</div>
-		  	<div class="bs-example">
-              <div class="list-group">
-                <a href="#" class="list-group-item active">
-                  Application Menu
-                </a>
-                <<%= link_to "Manifests", manifests_path, class: "list-group-item" %> 
-                <a href="#" class="list-group-item">Picking Lists
-                </a>
-                <a href="#" class="list-group-item">Enquires
-                </a>
-                <a href="#" class="list-group-item">Labels
-                </a>
-              </div>
-            </div>
-            <div class="form-group">
-                  <label class="control-label">Quick Launch</label>
-                  <div class="input-group">
-                    <span class="input-group-addon">Manifest Number:</span>
-                     <%= form_for(:manifest) do |f| %>
-                     	<%= f.text_field :@manifest_no, class: "form-control" %>
-                     <% end %>
-                    <span class="input-group-btn">
-                    	<<%= link_to "Go", manifest_path, class: "btn btn-default"%> 
-                    </span>
-                  </div>
-                  <div class="input-group">
-                    <span class="input-group-addon">Purchase Order:</span>
-                     <%= form_for(:purchaseorder) do |f| %>
-                     	<%= f.text_field :@po_no, class: "form-control" %>
-                     <% end %>
-                    <span class="input-group-btn">
-                    	<<%= link_to "Go", purchaseorder_path, class: "btn btn-default"%> 
-                    </span>
-                </div>
-		</div>
- 	</div>
- </div>
-</div>
+  <div class="row">
+      <div class="col-md-6 center">
+          <%= link_to image_tag("Anglo-logo-home.gif", alt: "Angloamerican"), "http://www.angloamerican.com.au" %>
+      </div>
+      <div class="col-md-6 center">
+          <h3>Home Page</h3>
+      </div>
+  </div>
+
+
+	<div class="jumbotron">
+			<% provide(:title, @user.name) %>
+			<div class="row">
+  			<aside class="span4">
+					<section>
+  					<h2>
+   						<%= gravatar_for @user %>
+  	 	 		  		<%= @user.name %>
+ 					</h2>
+			 			</section>
+				</aside>
+			</div>
+		<div>
+		 <h3>
+	     	Welcome to the Angloamerican Warehouse Application home page. 
+     </h3>
+	  </div>
+  	<div class="bs-example">
+      <div class="list-group">
+        <a href="#" class="list-group-item active">
+          Application Menu
+        </a>
+        <%= link_to "Receipt by Manifest", manifests_path, class: "list-group-item" %>                
+        <%= link_to "Receipts Status", receipts_path, class: "list-group-item" %>
+      </div>
+    </div>
+  </div>
+
 
