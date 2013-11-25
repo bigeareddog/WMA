@@ -28,39 +28,37 @@ $(document).ready( function () {
       </div>
   </div>
 
-
   <div class="panel panel-info">
     <div class="panel-heading">
       <h3 class="panel-title">Purchase Order Details</h3>
     </div>
     <div class="panel-body">
-      <p class="lead">
-        <div class="col-md-4"> 
-            <b>Po no:</b>
-            <%= @purchaseorder.po_no %>
-          </div>
-          <div class="col-md-4"> 
-            <b>Po type:</b>
-            <%= @purchaseorder.delivery_location %>
-          </div>
-          <div class="col-md-4"> 
-            <b>Supplier no:</b>
-            <%= @purchaseorder.supplier_no %>
-        </div>
-      </p>
+      <div class="col-md-4"> 
+        <b>Po no:</b>
+        <%= @purchaseorder.po_no %>
       </div>
-        <p class="lead">
-          <b>Warehouse:</b>
-          <%= @purchaseorder.warehouse_id %>
-          <b>District code:</b>
-          <%= @purchaseorder.district_code %>
-          <b>Status:</b>
-          <%= @purchaseorder.status %>
-        </p>
+      <div class="col-md-4"> 
+        <b>Po type:</b>
+        <%= @purchaseorder.delivery_location %>
+      </div>
+      <div class="col-md-4"> 
+        <b>Supplier no:</b>
+        <%= @purchaseorder.supplier_no %>
+      </div>
+      <div class="col-md-4"> 
+        <b>Warehouse:</b>
+        <%= @purchaseorder.warehouse_id %>
+      </div>
+      <div class="col-md-4"> 
+        <b>District code:</b>
+        <%= @purchaseorder.district_code %>
+      </div>
+      <div class="col-md-4"> 
+        <b>Status:</b>
+        <%= @purchaseorder.status %>
       </div>
     </div>
   </div>
-
 
   <div class="panel panel-info">
     <div class="panel-heading">
@@ -73,6 +71,8 @@ $(document).ready( function () {
             <th>Item</th>
             <th>Stock code</th>
             <th>Description</th>
+            <th>Part No</th>
+            <th>Bin Loc</th>
             <th>UOP</th>
             <th>OQ</th>
             <th>RQ</th>
@@ -87,6 +87,8 @@ $(document).ready( function () {
             <td><%= purchaseorder_item.po_item_no %></td>
             <td><%= purchaseorder_item.preq_stock_code %></td> 
             <td></td>             
+            <td></td>
+            <td></td>
             <td><%= purchaseorder_item.unit_of_issue %></td>
             <td><%= purchaseorder_item.curr_qty %></td>
             <td></td>
@@ -96,8 +98,7 @@ $(document).ready( function () {
          </tbody>
         <% end %>
         </table>
-        <%= link_to 'Back', manifests_path %>
       </div>
   </div>
+  <%= link_to 'Home', manifests_path %>
 </div>
-<%= link_to 'Home', manifests_path %>

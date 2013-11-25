@@ -387,13 +387,14 @@ hr {
 
 p {
   margin: 0 0 10.5px;
-}
+} 
 
 .lead {
   margin-bottom: 21px;
   font-size: 17px;
   font-weight: 200;
   line-height: 1.4;
+
 }
 
 @media (min-width: 768px) {
@@ -5979,6 +5980,8 @@ a.list-group-item.active:focus .list-group-item-text {
 
 .panel-body {
   padding: 15px;
+/* Tyson */
+  font-size: 18px;
 }
 
 .panel-body:before,

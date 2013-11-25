@@ -23,10 +23,10 @@ $(document).ready( function () {
 
   <div class="row">
     <div class="col-md-4 center">
-        <h3>Manifest Details: </h3>
+        <h3>Manifest Item Details: </h3>
     </div>
     <div class="col-md-8 center">
-        <p class="lead">Manifest Details: Review and manage outstanding consignment notes contained in a delivery manifest</p>
+        <p class="lead">Review and manage outstanding consignment notes contained in a delivery manifest</p>
     </div>
   </div>
 
@@ -35,9 +35,7 @@ $(document).ready( function () {
       <h3 class="panel-title">Consignment Note Details</h3>
     </div>
     <div class="panel-body">
-        <p id="notice"><%= notice %></p>
-        <p class="lead">
-         <div class="col-md-4"> 
+          <div class="col-md-4"> 
             <b>Manifest no:</b>
             <%= @manifest_item.manifest_no %>
           </div>
@@ -49,8 +47,6 @@ $(document).ready( function () {
             <b>Con note date:</b>
             <%= @manifest_item.con_note_date.strftime "%d/%m/%Y" %>
           </div>
-        </p>
-        <p class="lead">
           <div class="col-md-4 center"> 
             <b>Sender:</b>   
             <%= @manifest_item.sender %>
@@ -63,8 +59,6 @@ $(document).ready( function () {
             <b>Pallet description:</b>
             <%= @manifest_item.pallet_description %>
           </div>
-        </p>
-        <p class="lead">
           <div class="col-md-4 center"> 
             <b>Pallet weight:</b>
             <%= @manifest_item.pallet_weight %>
@@ -73,7 +67,6 @@ $(document).ready( function () {
             <b>Manifest po no:</b>
             <%= @manifest_item.manifest_po_no %>
           </div>
-        </p>
       </div>
     </div>
 
@@ -108,7 +101,7 @@ $(document).ready( function () {
         <td><%= purchaseorder.district_code %></td>
         <td><%= purchaseorder.freight_code %></td>
         <td><%= purchaseorder.delivery_location %></td>
-        <td><%= link_to 'Show', purchaseorder,class: "btn btn-primary btn-sm"  %></td>
+        <td><%= link_to 'Display', purchaseorder,class: "btn btn-primary btn-sm"  %></td>
       </tr>
     <tbody>
     <% end %>

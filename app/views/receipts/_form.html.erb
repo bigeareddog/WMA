@@ -32,15 +32,15 @@
           <%= f.text_field :part_no,:readonly => true, :class => "form-control", id: "inputDefault" , :value => "Drag Line Cable"  %>
         </div> 
         <div class="field">
+          <%= f.label :receipt_ref %><br />
+          <%= f.text_field :receipt_ref,:readonly => true, :class => "form-control", id: "inputDefault"  %>
+        </div>
+        <div class="field">
           <%= f.label :bin_location %><br />
           <%= f.text_field :bin_location,:class => "form-control", id: "inputDefault"  %>
         </div>
         <div class="field">
-          <%= f.label :receipt_ref %><br />
-          <%= f.text_field :receipt_ref, :class => "form-control", id: "inputDefault"  %>
-        </div>
-        <div class="field">
-          <%= f.label :oum, "OUM" %><br />
+          <%= f.label :oum, "UOP" %><br />
           <%= f.text_field :oum, :class => "form-control", id: "inputDefault" %>
         </div>
         <div class="field">

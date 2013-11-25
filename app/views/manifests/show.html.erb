@@ -28,6 +28,7 @@ $(document).ready( function () {
         <p class="lead">Review and manage outstanding consignment notes contained in a delivery manifest</p>
     </div>
   </div>
+
   <div class="panel panel-info">
     <div class="panel-heading">
       <h3 class="panel-title">Manifest Details</h3>
@@ -35,12 +36,18 @@ $(document).ready( function () {
     <div class="panel-body">
       <p id="notice"><%= notice %></p>
       <p class="lead">
-        <b>Manifest no:</b>
-        <%= @manifest.manifest_no %>
-        <b>Eta date:</b>
-        <%= @manifest.eta_date.strftime "%d/%m/%Y" %>
-        <b>Trailers:</b>
-        <%= @manifest.trailers %>
+        <div class="col-md-4"> 
+          <b>Manifest no:</b>
+          <%= @manifest.manifest_no %>
+        </div>
+        <div class="col-md-4"> 
+          <b>Eta date:</b>
+          <%= @manifest.eta_date.strftime "%d/%m/%Y" %>
+        </div>
+        <div class="col-md-4"> 
+          <b>Trailers:</b>
+          <%= @manifest.trailers %>
+        </div>
       </p>
   </div>
 </div>
@@ -72,7 +79,7 @@ $(document).ready( function () {
           <td><%= manifest_item.number_items %></td>
           <td><%= manifest_item.pallet_description %></td>
           <td><%= manifest_item.pallet_weight %></td>
-          <td><%= link_to 'Show', manifest_item,class: "btn btn-primary btn-sm"%></td>
+          <td><%= link_to 'Display', manifest_item,class: "btn btn-primary btn-sm"%></td>
        </tr>
        </tbody>
        <% end %>
