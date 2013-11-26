@@ -81,12 +81,4 @@ class PurchaseorderItemsController < ApplicationController
     end
   end
 
-  def createseed 
-    self = PurchaseorderItem.new(params[:purchaseorder_item])
-    po = Purchaseorder.find_by_po_no @purchaseorder_item
-    if (!@po.nil?)
-      @purchaseorder_item.purchaseorder_id = po.id
-      @purchaseorder_item.save
-    end
-  end
 end
