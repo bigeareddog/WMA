@@ -34,7 +34,7 @@ $(document).ready( function () {
     <div class="panel-heading">
       <h3 class="panel-title">Consignment Note Details</h3>
     </div>
-    <div class="panel-body">
+    <div class="panel-body">   
           <div class="col-md-4"> 
             <b>Manifest no:</b>
             <%= @manifest_item.manifest_no %>
@@ -47,24 +47,24 @@ $(document).ready( function () {
             <b>Con note date:</b>
             <%= @manifest_item.con_note_date.strftime "%d/%m/%Y" %>
           </div>
-          <div class="col-md-4 center"> 
+          <div class="col-md-8 center"> 
             <b>Sender:</b>   
-            <%= @manifest_item.sender %>
+            <%= @manifest_item.sender %>  
           </div>
           <div class="col-md-4 center">           
             <b>Number items:</b>
             <%= @manifest_item.number_items %>
           </div>
           <div class="col-md-4 center"> 
-            <b>Pallet description:</b>
+            <b>Pallet:</b>
             <%= @manifest_item.pallet_description %>
           </div>
           <div class="col-md-4 center"> 
-            <b>Pallet weight:</b>
+            <b>Weight:</b>
             <%= @manifest_item.pallet_weight %>
           </div>
           <div class="col-md-4 center"> 
-            <b>Manifest po no:</b>
+            <b>PO No:</b>
             <%= @manifest_item.manifest_po_no %>
           </div>
       </div>
@@ -80,12 +80,11 @@ $(document).ready( function () {
       <tr>
         <th>Po no</th>
         <th>Type</th>
-        <th>Warehouse</th>
         <th>Supplier no</th>
-        <th>Status</th>
         <th>District</th>
         <th>Freight code</th>
         <th>Delivery location</th>
+        <th>Status</th>
         <th></th>
       </tr>
     </thead>
@@ -95,12 +94,11 @@ $(document).ready( function () {
       <tr>
         <td><%= purchaseorder.po_no %></td>
         <td><%= purchaseorder.po_type %></td>
-        <td><%= purchaseorder.warehouse_id %></td>
         <td><%= purchaseorder.supplier_no %></td>
-        <td><%= purchaseorder.status %></td>
         <td><%= purchaseorder.district_code %></td>
         <td><%= purchaseorder.freight_code %></td>
         <td><%= purchaseorder.delivery_location %></td>
+        <td><%= purchaseorder.status %></td>
         <td><%= link_to 'Display', purchaseorder,class: "btn btn-primary btn-sm"  %></td>
       </tr>
     <tbody>

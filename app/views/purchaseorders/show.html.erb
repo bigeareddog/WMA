@@ -76,6 +76,7 @@ $(document).ready( function () {
             <th>UOP</th>
             <th>OQ</th>
             <th>RQ</th>
+            <th>Status</th>
             <th></th>
             <th></th>
           </tr>
@@ -86,13 +87,14 @@ $(document).ready( function () {
           <tr>
             <td><%= purchaseorder_item.po_item_no %></td>
             <td><%= purchaseorder_item.preq_stock_code %></td> 
-            <td></td>             
-            <td></td>
-            <td></td>
-            <td><%= purchaseorder_item.unit_of_issue %></td>
+            <td><%= purchaseorder_item.stock_code_description %></td>             
+            <td><%= purchaseorder_item.part_no%></td>
+            <td><%= purchaseorder_item.bin_code%></td>
+            <td><%= purchaseorder_item.unit_of_purch %></td>
             <td><%= purchaseorder_item.curr_qty %></td>
             <td></td>
-            <td><%=link_to "Receipt", new_receipt_path, class: "btn btn-success btn-sm" %></td> 
+            <td></td>
+            <td><%=link_to "Receipt", new_receipt_path(:purchaseorder_item_id => purchaseorder_item.id), class: "btn btn-success btn-sm" %></td> 
             <td><%= link_to 'Detail', purchaseorder_item,class: "btn btn-primary btn-sm"  %></td>
           </tr>
          </tbody>

@@ -1,5 +1,7 @@
 class PurchaseorderItem < ActiveRecord::Base
   attr_accessible :act_lead_time, 
+                  :bin_code,
+                  :bin_location,
 				  :create_date, 
 				  :curr_due_date, 
 				  :curr_qty, 
@@ -7,6 +9,7 @@ class PurchaseorderItem < ActiveRecord::Base
 				  :due_site_date, 
 				  :orig_due_date, 
 				  :orig_qty, 
+				  :part_no,
 				  :po_item_no, 
 				  :po_item_type, 
 				  :po_no, 
@@ -18,12 +21,13 @@ class PurchaseorderItem < ActiveRecord::Base
 				  :receipt_status, 
 				  :status, 
 				  :stock_code, 
+				  :stock_code_description,
 				  :unit_of_issue, 
 				  :unit_of_purch, 
 				  :warehouse_id
 
 	belongs_to :purchaseorder
 
-	has_many :receipts
+	has_one :receipt
 
 end

@@ -41,7 +41,7 @@ $(document).ready( function () {
           <%= @manifest.manifest_no %>
         </div>
         <div class="col-md-4"> 
-          <b>Eta date:</b>
+          <b>ETA:</b>
           <%= @manifest.eta_date.strftime "%d/%m/%Y" %>
         </div>
         <div class="col-md-4"> 
@@ -66,6 +66,7 @@ $(document).ready( function () {
           <th>Items</th>
           <th>Desc</th>
           <th>Weight</th>
+          <th>Status</th>
           <th>Action</th>
         </tr>
       </thead>  
@@ -79,6 +80,7 @@ $(document).ready( function () {
           <td><%= manifest_item.number_items %></td>
           <td><%= manifest_item.pallet_description %></td>
           <td><%= manifest_item.pallet_weight %></td>
+          <td></td>
           <td><%= link_to 'Display', manifest_item,class: "btn btn-primary btn-sm"%></td>
        </tr>
        </tbody>

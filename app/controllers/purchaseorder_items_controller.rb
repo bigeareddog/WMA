@@ -25,7 +25,7 @@ class PurchaseorderItemsController < ApplicationController
   # GET /purchaseorder_items/new.json
   def new
     @purchaseorder_item = PurchaseorderItem.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @purchaseorder_item }
@@ -78,6 +78,15 @@ class PurchaseorderItemsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to purchaseorder_items_url }
       format.json { head :no_content }
+    end
+  end
+
+  def createseed 
+    self = PurchaseorderItem.new(params[:purchaseorder_item])
+    po = Purchaseorder.find_by_po_no @purchaseorder_item
+    if (!@po.nil?)
+      @purchaseorder_item.purchaseorder_id = po.id
+      @purchaseorder_item.save
     end
   end
 end

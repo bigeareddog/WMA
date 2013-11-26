@@ -1,14 +1,16 @@
 class Receipt < ActiveRecord::Base
   attr_accessible :bin_location, 
-         	  :complete_order, 
-	          :description, 
-        	  :label_qty, 
-	          :oum, 
-        	  :part_no, 
-	          :receipt_ref, 
-	          :stock_code
-
- has_many :purchaseorderitems
+         		      :complete_order, 
+	      	        :description, 
+        	        :label_qty, 
+	                :oum, 
+        	        :part_no,
+        	        :po_no,
+        	        :po_item_no,
+        	        :purchaseorder_item_id,
+                  :ReceiptQty, 
+	                :receipt_ref, 
+	                :stock_code
 
  validates :bin_location, presence: true 
  validates :receipt_ref, presence: true 

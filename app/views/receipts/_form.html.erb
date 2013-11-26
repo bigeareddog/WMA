@@ -1,10 +1,10 @@
+<div class = container>
 <div class="panel panel-info">
   <div class="panel-heading">
-    <h3 class="panel-title">Receipt an Purchase Order Item into Inventory</h3>
+    <h3 class="panel-title">Receipt an Purchase Order Item Details</h3>
   </div>
   <div class="panel-body">
-   <div class="col-lg-6">
-  	<div class = "well">
+
       <%= form_for(@receipt) do |f| %>
         <% if @receipt.errors.any? %>
           <div class="alert alert-dismissable alert-danger">
@@ -18,44 +18,55 @@
             </ul>
           </div>
         <% end %>
-        
-        <div class="field">
-          <%= f.label :stock_code %><br />
-          <%= f.text_field :stock_code,:readonly => true,:class => "form-control", id: "inputDefault" , :value => "000001909" %>
+        <div class="col-md-4"> 
+          <b>Po no:</b>
+          <%= @purchaseorder_item.po_no unless @purchaseorder_item.po_no.nil? %>
         </div>
-         <div class="field">
-          <%= f.label :description %><br />
-          <%= f.text_field :description,:readonly => true, :class => "form-control", id: "inputDefault" , :value => "Drag Line Cable Spool"  %>
-        </div>        
-        <div class="field">
-          <%= f.label :part_no %><br />
-          <%= f.text_field :part_no,:readonly => true, :class => "form-control", id: "inputDefault" , :value => "Drag Line Cable"  %>
-        </div> 
-        <div class="field">
-          <%= f.label :receipt_ref %><br />
-          <%= f.text_field :receipt_ref,:readonly => true, :class => "form-control", id: "inputDefault"  %>
+        <div class="col-md-4"> 
+          <b>Item No:</b>
+          <%= @purchaseorder_item.po_item_no %>
         </div>
-        <div class="field">
-          <%= f.label :bin_location %><br />
-          <%= f.text_field :bin_location,:class => "form-control", id: "inputDefault"  %>
+        <div class="col-md-4"> 
+          <b>Stock Code: </b>
+          <%= @purchaseorder_item.preq_stock_code %>
         </div>
-        <div class="field">
-          <%= f.label :oum, "UOP" %><br />
-          <%= f.text_field :oum, :class => "form-control", id: "inputDefault" %>
+        <div class="col-md-4"> 
+          <b>Part Number: </b>
+          <%= @purchaseorder_item.part_no %>
         </div>
-        <div class="field">
-          <%= f.label :label_qty, "Qty Received" %><br />
-          <%= f.number_field :label_qty, :class => "form-control", id: "inputDefault"  %>
+        <div class="col-md-8"> 
+          <b>Desc: </b>
+          <%= @purchaseorder_item.stock_code_description %>
         </div>
-        <div class="field">
-          <%= f.label :complete_order %><br />
-          <%= f.check_box :complete_order %>
-        </div>
-        <div class="actions">
-          <%= f.submit :class => "btn btn-large btn-success" %>
-          <%= link_to "Cancel", manifests_path , type: "button" ,class: "btn btn-large btn-default" %> 
-        </div>
-       <% end %>
+      </div>
+    </div>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">Receipt Entry</h3>
+      </div>
+      <div class="panel-body">
+          <div class="col-md-4"> 
+              <%= f.label :receipt_ref %><br />
+              <%= f.text_field :receipt_ref, :class => "form-control", id: "inputDefault"  %>
+            </div>
+          <div class="col-md-4"> 
+            <%= f.label :bin_location %><br />
+            <%= f.text_field :bin_location,:class => "form-control", id: "inputDefault"  %>
+          </div>
+          <div class="col-md-4"> 
+            <%= f.label :UOP, "UOP" %><br />
+            <%= f.text_field :oum, :class => "form-control", id: "inputDefault" %>
+          </div>
+          <div class="col-md-4"> 
+            <%= f.label :ReceiptQty, "Qty Received" %><br />
+            <%= f.number_field :ReceiptQty, :class => "form-control", id: "inputDefault"  %>
+          </div>
+          <div class="col-md-9">
+              <%= f.submit :class => "btn btn-large btn-success" %>
+              <%= link_to "Cancel", manifests_path , type: "button" ,class: "btn btn-large btn-default" %> 
+          </div>
+         <% end %>
+      </div>
   </div>
  </div>
 </div>

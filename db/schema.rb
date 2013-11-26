@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131118072808) do
+ActiveRecord::Schema.define(:version => 20131126065735) do
 
   create_table "binholdings", :force => true do |t|
     t.string   "description"
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(:version => 20131118072808) do
     t.string   "trailers"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "description"
   end
 
   create_table "purchaseorder_items", :force => true do |t|
@@ -84,8 +85,12 @@ ActiveRecord::Schema.define(:version => 20131118072808) do
     t.string   "warehouse_id"
     t.string   "curr_qty"
     t.integer  "purchaseorder_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+    t.string   "stock_code_description"
+    t.string   "part_no"
+    t.string   "bin_code"
+    t.string   "bin_location"
   end
 
   create_table "purchaseorders", :force => true do |t|
@@ -122,8 +127,12 @@ ActiveRecord::Schema.define(:version => 20131118072808) do
     t.string   "oum"
     t.integer  "label_qty"
     t.boolean  "complete_order"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.integer  "purchaseorder_item_id"
+    t.string   "po_item"
+    t.string   "po_no"
+    t.integer  "ReceiptQty"
   end
 
   create_table "stockcodes", :force => true do |t|

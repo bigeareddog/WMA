@@ -1,5 +1,6 @@
 class Manifest < ActiveRecord::Base
-  attr_accessible :eta_date, 
+  attr_accessible :description,
+  				  :eta_date, 
 	              :manifest_no, 
 		          :trailers
 
