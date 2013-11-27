@@ -4,22 +4,10 @@
     <h3 class="panel-title">Receipt an Purchase Order Item Details</h3>
   </div>
   <div class="panel-body">
+        <p id="notice"><%= notice %></p>
 
-      <%= form_for(@receipt) do |f| %>
-        <% if @receipt.errors.any? %>
-          <div class="alert alert-dismissable alert-danger">
-              <button type="button" class="close" data-dismiss="alert">×</button>
-              <h2><%= pluralize(@receipt.errors.count, "error") %> prohibited this receipt from being saved:</h2>
-          </div>
-            <ul>
-            <% @receipt.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-            <% end %>
-            </ul>
-          </div>
-        <% end %>
         <div class="col-md-4"> 
-          <b>Po no:</b>
+          <b>Po No:</b>
           <%= @purchaseorder_item.po_no unless @purchaseorder_item.po_no.nil? %>
         </div>
         <div class="col-md-4"> 
@@ -34,40 +22,59 @@
           <b>Part Number: </b>
           <%= @purchaseorder_item.part_no %>
         </div>
+        <div class="col-md-4"> 
+          <b>UOP: </b>
+          <%= @purchaseorder_item.unit_of_purch %>
+        </div>
         <div class="col-md-8"> 
           <b>Desc: </b>
           <%= @purchaseorder_item.stock_code_description %>
         </div>
+    </div>
+  </div>
+
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Receipt Entry</h3>
+    </div>
+    <div class="panel-body">
+      <%= form_for(@receipt) do |f| %>
+        <% if @receipt.errors.any? %>
+          <div class="alert alert-dismissable alert-danger">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <h2><%= pluralize(@receipt.errors.count, "error") %> prohibited this receipt from being saved:</h2>
+          </div>
+            <ul>
+            <% @receipt.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+        <% end %>
+
+        <div class="col-md-4"> 
+            <%= f.label :receipt_ref %><br />
+            <%= f.text_field :receipt_ref, :class => "form-control", id: "inputDefault"  %>
+          </div>
+        <div class="col-md-4"> 
+          <%= f.label :bin_location %><br />
+          <%= f.text_field :bin_location,:class => "form-control", id: "inputDefault"  %>
+        </div>
+        <div class="col-md-4"> 
+          <%= f.label :serial_no  %><br />
+          <%= f.text_field :serial_no, :class => "form-control", id: "inputDefault" %>
+        </div>
+        <div class="col-md-4"> 
+          <%= f.label :ReceiptQty, "Qty Received" %><br />
+          <%= f.number_field :ReceiptQty, :class => "form-control", id: "inputDefault"  %>
+        </div>
+
+        <div class="col-md-9">
+            <%= f.submit :class => "btn btn-large btn-success" %>
+            <%= link_to "Cancel", purchaseorder_path(:id => @purchaseorder_item.purchaseorder_id), type: "button" ,class: "btn btn-large btn-default" %> 
+        </div>
+       <% end %>
       </div>
     </div>
-    <div class="panel panel-info">
-      <div class="panel-heading">
-        <h3 class="panel-title">Receipt Entry</h3>
-      </div>
-      <div class="panel-body">
-          <div class="col-md-4"> 
-              <%= f.label :receipt_ref %><br />
-              <%= f.text_field :receipt_ref, :class => "form-control", id: "inputDefault"  %>
-            </div>
-          <div class="col-md-4"> 
-            <%= f.label :bin_location %><br />
-            <%= f.text_field :bin_location,:class => "form-control", id: "inputDefault"  %>
-          </div>
-          <div class="col-md-4"> 
-            <%= f.label :UOP, "UOP" %><br />
-            <%= f.text_field :oum, :class => "form-control", id: "inputDefault" %>
-          </div>
-          <div class="col-md-4"> 
-            <%= f.label :ReceiptQty, "Qty Received" %><br />
-            <%= f.number_field :ReceiptQty, :class => "form-control", id: "inputDefault"  %>
-          </div>
-          <div class="col-md-9">
-              <%= f.submit :class => "btn btn-large btn-success" %>
-              <%= link_to "Cancel", manifests_path , type: "button" ,class: "btn btn-large btn-default" %> 
-          </div>
-         <% end %>
-      </div>
-  </div>
  </div>
-</div>
+
 

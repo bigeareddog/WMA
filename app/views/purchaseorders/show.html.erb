@@ -33,7 +33,7 @@ $(document).ready( function () {
       <h3 class="panel-title">Purchase Order Details</h3>
     </div>
     <div class="panel-body">
-      <div class="col-md-4"> 
+      <div class="col-md-4">
         <b>Po no:</b>
         <%= @purchaseorder.po_no %>
       </div>
@@ -72,10 +72,11 @@ $(document).ready( function () {
             <th>Stock code</th>
             <th>Description</th>
             <th>Part No</th>
-            <th>Bin Loc</th>
             <th>UOP</th>
             <th>OQ</th>
             <th>RQ</th>
+            <th>Bin</th>
+            <th>Rct Ref</th>
             <th>Status</th>
             <th></th>
             <th></th>
@@ -89,9 +90,10 @@ $(document).ready( function () {
             <td><%= purchaseorder_item.preq_stock_code %></td> 
             <td><%= purchaseorder_item.stock_code_description %></td>             
             <td><%= purchaseorder_item.part_no%></td>
-            <td><%= purchaseorder_item.bin_code%></td>
             <td><%= purchaseorder_item.unit_of_purch %></td>
             <td><%= purchaseorder_item.curr_qty %></td>
+            <td></td>
+            <td><%= purchaseorder_item.bin_code%></td>
             <td></td>
             <td></td>
             <td><%=link_to "Receipt", new_receipt_path(:purchaseorder_item_id => purchaseorder_item.id), class: "btn btn-success btn-sm" %></td> 

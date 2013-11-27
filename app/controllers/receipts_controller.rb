@@ -47,8 +47,9 @@ class ReceiptsController < ApplicationController
   # POST /receipts
   # POST /receipts.json
   def create
-    @receipt = Receipt.new(params[:receipt])
 
+    @receipt = Receipt.new(params[:receipt])
+    @purchaseorder_item = PurchaseorderItem.find(params[:purchaseorder_item_id])
     respond_to do |format|
       if @receipt.save
         format.html { redirect_to @receipt, notice: 'Receipt was successfully created.' }

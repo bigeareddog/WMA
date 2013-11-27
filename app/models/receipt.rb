@@ -9,7 +9,8 @@ class Receipt < ActiveRecord::Base
         	        :po_item_no,
         	        :purchaseorder_item_id,
                   :ReceiptQty, 
-	                :receipt_ref, 
+	                :receipt_ref,
+                  :serial_no, 
 	                :stock_code
 
  validates :bin_location, presence: true 

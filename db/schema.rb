@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131126065735) do
+ActiveRecord::Schema.define(:version => 20131126224620) do
 
   create_table "binholdings", :force => true do |t|
     t.string   "description"
@@ -133,6 +133,7 @@ ActiveRecord::Schema.define(:version => 20131126065735) do
     t.string   "po_item"
     t.string   "po_no"
     t.integer  "ReceiptQty"
+    t.string   "serial_no"
   end
 
   create_table "stockcodes", :force => true do |t|
