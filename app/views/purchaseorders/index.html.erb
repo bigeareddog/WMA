@@ -51,6 +51,7 @@ $(document).ready( function () {
         <td><%= purchaseorder.freight_code %></td>
         <td><%= purchaseorder.delivery_location %></td>
         <td><%= purchaseorder.status %></td>
+        <td><%= link_to 'Receipt', purchaseorder,class: "btn btn-success btn-sm"  %></td>
         <td><%= link_to 'Display', purchaseorder,class: "btn btn-primary btn-sm"  %></td>
       </tr>
     <tbody>
