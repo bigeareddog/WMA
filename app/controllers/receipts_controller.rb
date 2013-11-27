@@ -26,14 +26,14 @@ class ReceiptsController < ApplicationController
   # GET /receipts/new
   # GET /receipts/new.json
   def new
-    @purchaseorder_item = PurchaseorderItem.find(params[:purchaseorder_item_id])
     @receipt = Receipt.new
-    #@receipt.po_no = purchaseorder_item.po_no
-    #@receipt.po_item_no = purchaseorder_item.po_item_no
-    #@receipt.purchaseorder_item_id = @purchaseorder_item.id
-    #@receipt.stock_code = purchaseorder_item_id.preq_stock_code
-    #@receipt.description = purchaseorder_item.stock_code_description
-    #@receipt.part_no = purchaseorder_item.part_no
+    @purchaseorder_item = PurchaseorderItem.find(params[:purchaseorder_item_id])
+    @receipt.po_no = @purchaseorder_item.po_no
+    #@receipt.po_item_no = @purchaseorder_item.po_item_no
+    @receipt.purchaseorder_item_id = @purchaseorder_item.id
+    #@receipt.stock_code = @purchaseorder_item_id.preq_stock_code
+    @receipt.description = @purchaseorder_item.stock_code_description
+    @receipt.part_no = @purchaseorder_item.part_no
 
     respond_to do |format|
       format.html # new.html.erb
