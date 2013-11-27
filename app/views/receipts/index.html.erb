@@ -2,6 +2,7 @@
 
 <table class = "table table-striped">
   <tr>
+    <th>PO No</th>
     <th>Stock code</th>
     <th>Part no</th>
     <th>Description</th>
@@ -16,6 +17,7 @@
 
 <% @receipts.each do |receipt| %>
   <tr>
+    <td><%= receipt.po_no %></td>
     <td><%= receipt.stock_code %></td>
     <td><%= receipt.part_no %></td>
     <td><%= receipt.description %></td>

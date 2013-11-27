@@ -33,7 +33,7 @@
             <%= f.text_field :part_no, :class => "form-control", id: "inputDefault"  %>
         </div>
         <div class="col-md-4"> 
-            <%= f.label :oum %><br />
+            <%= f.label :oum, "UOP" %><br />
             <%= f.text_field :oum, :class => "form-control", id: "inputDefault"  %>
         </div>
         <div class="col-md-4"> 
@@ -49,7 +49,7 @@
           <%= f.number_field :ReceiptQty, :class => "form-control", id: "inputDefault"  %>
         </div>
         <div class="col-md-4"> 
-          <%= f.label :receipt_ref, "Qty Received" %><br />
+          <%= f.label :receipt_ref %><br />
           <%= f.number_field :receipt_ref, :class => "form-control", id: "inputDefault"  %>
         </div>
         <div class="col-md-9">
@@ -59,9 +59,5 @@
       </div>
     </div>
 
-
-<h1>Editing receipt</h1>
-
-<%= render 'form' %>
 
 <%= link_to 'Home', manifests_path %>
