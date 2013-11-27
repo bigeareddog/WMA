@@ -2,9 +2,7 @@ NotForProfit::Application.routes.draw do
 
   resources :receipts
 
-
   resources :purchaseorder_items
-
 
   resources :purchaseorders
 
@@ -14,22 +12,18 @@ NotForProfit::Application.routes.draw do
     end
   end
 
-
   resources :manifest_items
-
 
   resources :manifests
 
-
   resources :binholdings
 
-
   resources :bins
-
 
   resources :stockcodes
 
   resources :users
+  
   resources :sessions, only: [:new, :create, :destroy]
 
   match '/signup',  to: 'users#new'

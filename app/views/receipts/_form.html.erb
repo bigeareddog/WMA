@@ -4,34 +4,8 @@
     <h3 class="panel-title">Receipt an Purchase Order Item Details</h3>
   </div>
   <div class="panel-body">
-        <p id="notice"><%= notice %></p>
 
-        <div class="col-md-4"> 
-          <b>Po No:</b>
-          <%= @purchaseorder_item.po_no unless @purchaseorder_item.po_no.nil? %>
-        </div>
-        <div class="col-md-4"> 
-          <b>Item No:</b>
-          <%= @purchaseorder_item.po_item_no %>
-        </div>
-        <div class="col-md-4"> 
-          <b>Stock Code: </b>
-          <%= @purchaseorder_item.preq_stock_code %>
-        </div>
-        <div class="col-md-4"> 
-          <b>Part Number: </b>
-          <%= @purchaseorder_item.part_no %>
-        </div>
-        <div class="col-md-4"> 
-          <b>UOP: </b>
-          <%= @purchaseorder_item.unit_of_purch %>
-        </div>
-        <div class="col-md-8"> 
-          <b>Desc: </b>
-          <%= @purchaseorder_item.stock_code_description %>
-        </div>
     </div>
-  </div>
 
   <div class="panel panel-info">
     <div class="panel-heading">
@@ -70,7 +44,6 @@
 
         <div class="col-md-9">
             <%= f.submit :class => "btn btn-large btn-success" %>
-            <%= link_to "Cancel", purchaseorder_path(:id => @purchaseorder_item.purchaseorder_id), type: "button" ,class: "btn btn-large btn-default" %> 
         </div>
        <% end %>
       </div>

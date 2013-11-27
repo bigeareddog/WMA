@@ -17,8 +17,6 @@ $(document).ready( function () {
  } );
 </script>
 <div class = "container">
-
-
     <div class="row">
       <div class="col-md-6 center">
           <h3>Purchase Orders:</h3>
@@ -65,44 +63,44 @@ $(document).ready( function () {
       <h3 class="panel-title">Purchase Order Items</h3>
     </div>
     <div class="panel-body">
-        <table id="purchaseorderitems", cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered"  >
-         <thead>     
-          <tr>
-            <th>Item</th>
-            <th>Stock code</th>
-            <th>Description</th>
-            <th>Part No</th>
-            <th>UOP</th>
-            <th>OQ</th>
-            <th>RQ</th>
-            <th>Bin</th>
-            <th>Rct Ref</th>
-            <th>Status</th>
-            <th></th>
-            <th></th>
-          </tr>
-         </thead>
+      <table id="purchaseorderitems", cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered"  >
+       <thead>     
+        <tr>
+          <th>Item</th>
+          <th>Stock code</th>
+          <th>Description</th>
+          <th>Part No</th>
+          <th>UOP</th>
+          <th>OQ</th>
+          <th>RQ</th>
+          <th>Bin</th>
+          <th>Rct Ref</th>
+          <th>Status</th>
+          <th></th>
+          <th></th>
+        </tr>
+       </thead>
 
-        <tbody>
-         <% @purchaseorder_items.each do |purchaseorder_item| %>
-          <tr>
-            <td><%= purchaseorder_item.po_item_no %></td>
-            <td><%= purchaseorder_item.preq_stock_code %></td> 
-            <td><%= purchaseorder_item.stock_code_description %></td>             
-            <td><%= purchaseorder_item.part_no%></td>
-            <td><%= purchaseorder_item.unit_of_purch %></td>
-            <td><%= purchaseorder_item.curr_qty %></td>
-            <td></td>
-            <td><%= purchaseorder_item.bin_code%></td>
-            <td></td>
-            <td></td>
-            <td><%=link_to "Receipt", new_receipt_path(:purchaseorder_item_id => purchaseorder_item.id), class: "btn btn-success btn-sm" %></td> 
-            <td><%= link_to 'Detail', purchaseorder_item,class: "btn btn-primary btn-sm"  %></td>
-          </tr>
-         </tbody>
-        <% end %>
-        </table>
-      </div>
+      <tbody>
+       <% @purchaseorder_items.each do |purchaseorder_item| %>
+        <tr>
+          <td><%= purchaseorder_item.po_item_no %></td>
+          <td><%= purchaseorder_item.preq_stock_code %></td> 
+          <td><%= purchaseorder_item.stock_code_description %></td>             
+          <td><%= purchaseorder_item.part_no%></td>
+          <td><%= purchaseorder_item.unit_of_purch %></td>
+          <td><%= purchaseorder_item.curr_qty %></td>
+          <td></td>
+          <td><%= purchaseorder_item.bin_code%></td>
+          <td></td>
+          <td></td>
+          <td><%=link_to "Receipt", new_receipt_path(:purchaseorder_item_id => purchaseorder_item.id), class: "btn btn-success btn-sm" %></td> 
+          <td><%= link_to 'Detail', purchaseorder_item,class: "btn btn-primary btn-sm"  %></td>
+        </tr>
+       </tbody>
+      <% end %>
+      </table>
+    </div>
   </div>
   <%= link_to 'Home', manifests_path %>
 </div>

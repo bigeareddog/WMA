@@ -28,6 +28,6 @@ class PurchaseorderItem < ActiveRecord::Base
 
 	belongs_to :purchaseorder
 
-	has_one :receipt
+	has_many :receipts
 
 end
