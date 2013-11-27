@@ -15,7 +15,8 @@ class ReceiptsController < ApplicationController
   def show
 
     @receipt = Receipt.find(params[:id])
-    @purchaseorder_item = PurchaseorderItem.find(params[:purchaseorder_item_id])
+    #@purchaseorder_item = PurchaseorderItem.find(params[:purchaseorder_item_id])
+    #@purchaseorder = Purchaseorder.find(params[:purchaseorder_item_id])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @receipt }

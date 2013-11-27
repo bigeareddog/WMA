@@ -1,5 +1,89 @@
-<h2>Receipt Purchase Order Item</h2>
+<div class = container>
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Receipt Entry</h3>
+    </div>
+    <div class="panel-body">
+ 
+      <%= form_for(@receipt) do |f| %>
+        <% if @receipt.errors.any? %>
+          <div class="alert alert-dismissable alert-danger">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <h2><%= pluralize(@receipt.errors.count, "error") %> prohibited this receipt from being saved:</h2>
+          </div>
+            <ul>
+            <% @receipt.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+        <% end %>
+  	  <p id="notice"><%= notice %></p>
+        <div class="col-md-4"> 
+            <%= f.label :receipt_ref %><br />
+            <%= f.text_field :receipt_ref, :class => "form-control", id: "inputDefault"  %>
+          </div>
+        <div class="col-md-4"> 
+          <%= f.label :bin_location %><br />
+          <%= f.text_field :bin_location,:class => "form-control", id: "inputDefault"  %>
+        </div>
+        <div class="col-md-4"> 
+          <%= f.label :serial_no  %><br />
+          <%= f.text_field :serial_no, :class => "form-control", id: "inputDefault" %>
+        </div>
+        <div class="col-md-4"> 
+          <%= f.label :ReceiptQty, "Qty Received" %><br />
+          <%= f.number_field :ReceiptQty, :class => "form-control", id: "inputDefault"  %>
+        </div>
 
-<%= render 'form' %>
+        <div class="col-md-9">
+            <%= f.submit :class => "btn btn-large btn-success" %>
+      	</div>
+      	<div class="col-md-9">
+      	            <%= link_to "Cancel", purchaseorder_path(:id => @purchaseorder_item.purchaseorder_id), type: "button" ,class: "btn btn-large btn-default" %> 
+       <% end %>
+      </div>
+                  
+    </div>
 
-<%= link_to 'Home', manifests_path %>
+  <div class="panel panel-info">
+  	<div class="panel-heading">
+    <h3 class="panel-title">Purchase Order Item Details</h3>
+ 
+  <div class="panel-body">
+
+        <div class="col-md-4"> 
+          <b>Po No:</b>
+          <%= @purchaseorder_item.po_no  %>
+        </div>
+        <div class="col-md-4"> 
+          <b>Item No:</b>
+          <%= @purchaseorder_item.po_item_no %>
+        </div>
+        <div class="col-md-4"> 
+          <b>Stock Code: </b>
+          <%= @purchaseorder_item.preq_stock_code %>
+        </div>
+        <div class="col-md-4"> 
+          <b>Part Number: </b>
+          <%= @purchaseorder_item.part_no %>
+        </div>
+        <div class="col-md-4"> 
+          <b>UOP: </b>
+          <%= @purchaseorder_item.unit_of_purch %>
+        </div>
+        <div class="col-md-8"> 
+          <b>Desc: </b>
+          <%= @purchaseorder_item.stock_code_description %>
+        </div>
+    </div>
+  </div>
+
+     <div class="col-md-6 center">
+        <%= link_to "Home", current_user, class: "btn btn-large" %>
+
+    </div>
+ </div>
+
+
+
+

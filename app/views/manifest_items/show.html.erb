@@ -33,7 +33,7 @@ $(document).ready( function () {
   <div class="panel panel-info">
     <div class="panel-heading">
       <h3 class="panel-title">Consignment Note Details</h3>
-    </div>
+  
     <div class="panel-body">   
           <div class="col-md-4"> 
             <b>Manifest no:</b>
@@ -86,6 +86,7 @@ $(document).ready( function () {
         <th>Delivery location</th>
         <th>Status</th>
         <th></th>
+        <th></th>
       </tr>
     </thead>
 
@@ -99,6 +100,7 @@ $(document).ready( function () {
         <td><%= purchaseorder.freight_code %></td>
         <td><%= purchaseorder.delivery_location %></td>
         <td><%= purchaseorder.status %></td>
+        <td><%= link_to 'Receipt', purchaseorder,class: "btn btn-success btn-sm"  %></td>
         <td><%= link_to 'Display', purchaseorder,class: "btn btn-primary btn-sm"  %></td>
       </tr>
     <tbody>
