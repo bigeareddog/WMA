@@ -1,3 +1,65 @@
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">Receipt Entry</h3>
+    </div>
+    <div class="panel-body">
+      <%= form_for(@receipt) do |f| %>
+        <% if @receipt.errors.any? %>
+          <div class="alert alert-dismissable alert-danger">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <h2><%= pluralize(@receipt.errors.count, "error") %> prohibited this receipt from being saved:</h2>
+          </div>
+            <ul>
+            <% @receipt.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+            </ul>
+        <% end %>
+
+        <div class="col-md-4"> 
+            <%= f.label :po_no%><br />
+            <%= f.text_field :po_no, :class => "form-control", id: "inputDefault"  %>
+        </div>
+        <div class="col-md-4"> 
+            <%= f.label :stock_code%><br />
+            <%= f.text_field :stock_code, :class => "form-control", id: "inputDefault"  %>
+        </div>
+        <div class="col-md-4"> 
+            <%= f.label :description%><br />
+            <%= f.text_field :description, :class => "form-control", id: "inputDefault"  %>
+        </div>
+        <div class="col-md-4"> 
+            <%= f.label :part_no%><br />
+            <%= f.text_field :part_no, :class => "form-control", id: "inputDefault"  %>
+        </div>
+        <div class="col-md-4"> 
+            <%= f.label :oum %><br />
+            <%= f.text_field :oum, :class => "form-control", id: "inputDefault"  %>
+        </div>
+        <div class="col-md-4"> 
+          <%= f.label :bin_location %><br />
+          <%= f.text_field :bin_location,:class => "form-control", id: "inputDefault"  %>
+        </div>
+        <div class="col-md-4"> 
+          <%= f.label :serial_no  %><br />
+          <%= f.text_field :serial_no, :class => "form-control", id: "inputDefault" %>
+        </div>
+        <div class="col-md-4"> 
+          <%= f.label :ReceiptQty, "Qty Received" %><br />
+          <%= f.number_field :ReceiptQty, :class => "form-control", id: "inputDefault"  %>
+        </div>
+        <div class="col-md-4"> 
+          <%= f.label :receipt_ref, "Qty Received" %><br />
+          <%= f.number_field :receipt_ref, :class => "form-control", id: "inputDefault"  %>
+        </div>
+        <div class="col-md-9">
+            <%= f.submit :class => "btn btn-large btn-success" %>
+        </div>
+       <% end %>
+      </div>
+    </div>
+
+
 <h1>Editing receipt</h1>
 
 <%= render 'form' %>

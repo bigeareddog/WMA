@@ -7,9 +7,8 @@
     <th>Description</th>
     <th>Bin location</th>
     <th>Receipt ref</th>
-    <th>Oum</th>
-    <th>Label qty</th>
-    <th>Complete order</th>
+    <th>UOP</th>
+    <th>Receipt qty</th>
     <th></th>
     <th></th>
     <th></th>
@@ -23,13 +22,15 @@
     <td><%= receipt.bin_location %></td>
     <td><%= receipt.receipt_ref %></td>
     <td><%= receipt.oum %></td>
-    <td><%= receipt.label_qty %></td>
-    <td><%= receipt.complete_order %></td>
+    <td><%= receipt.ReceiptQty %></td>
     <td><%= link_to 'Show', receipt %></td>
+    <td><%= link_to 'Edit', edit_receipt_path(receipt) %></td>
+
   </tr>
 <% end %>
 </table>
 
 <br />
+
 
 <%= link_to 'Home', manifests_path %>
