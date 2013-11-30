@@ -12,6 +12,12 @@ NotForProfit::Application.routes.draw do
     end
   end
 
+  resources :purchaseorders do
+    resources :receipts
+  end
+
+  
+
   resources :manifest_items
 
   resources :manifests

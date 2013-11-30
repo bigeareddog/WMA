@@ -1,20 +1,8 @@
 <script>
-$(document).ready( function () {
-  $('#example').dataTable( {
-    "sDom": "<'row-fluid'<'span6'T><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
-      "oTableTools": {
-        "aButtons": [
-          "copy",
-            "print",
-            {
-              "sExtends":    "collection",
-              "sButtonText": 'Save <span class="caret" />',
-              "aButtons":    [ "csv", "xls", "pdf" ]
-            }
-         ]
-       }
-     } );
- } );
+$('#purchaseorderitems').dataTable({
+  "sPaginationType": "bootstrap"
+
+});
 </script>
 <div class = "container">
     <div class="row">
@@ -97,9 +85,9 @@ $(document).ready( function () {
           <td><%=link_to "Receipt", new_receipt_path(:purchaseorder_item_id => purchaseorder_item.id), class: "btn btn-success btn-sm" %></td> 
           <td><%= link_to 'Detail', purchaseorder_item,class: "btn btn-primary btn-sm"  %></td>
         </tr>
-       </tbody>
-      <% end %>
-      </table>
+       <% end %>
+      </tbody>
+     </table>
     </div>
   </div>
   <%= link_to 'Home', manifests_path %>

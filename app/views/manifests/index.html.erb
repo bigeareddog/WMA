@@ -1,37 +1,18 @@
-<script>
-$(document).ready( function () {
-  $('#example').dataTable( {
-    "sDom": "<'row-fluid'<'span6'T><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
-      "oTableTools": {
-        "aButtons": [
-          "copy",
-            "print",
-            {
-              "sExtends":    "collection",
-              "sButtonText": 'Save <span class="caret" />',
-              "aButtons":    [ "csv", "xls", "pdf" ]
-            }
-         ]
-       }
-     } );
- } );
-</script>
-
 <div class = "container"> 
   <div class="row">
-    <div class="col-md-3 center">        
-        <h3>Delivery Manifests: </h3>
-    </div>
-    <div class="col-md-6 center">
-        <p class="lead">Review and manage outstanding delivery manifests</p>
-    </div>
-  </div>
+
+<script>
+$('#manifests').dataTable({
+  "sPaginationType": "bootstrap"
+
+});
+</script>
 
   <div class="panel panel-info">
     <div class="panel-heading">
-      <h3 class="panel-title">Manifest Details</h3>
+      <h3 class="panel-title">Outstanding Manifests</h3>
     </div>
-     <div class="panel-body">
+    <div class="panel-body">
       <table id="manifests", cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered"  >
        <thead>     
         <tr>
@@ -54,12 +35,14 @@ $(document).ready( function () {
             <td></td>
             <td><%= link_to 'Complete', manifest, class: "btn btn-primary btn-sm"  %></td>
           </tr>
-        </tbody>
+
         <% end %>
+        </tbody>
       </table>
     </div>
+  </div>
+
   </div>
     <div class="col-md-6 center">
         <%= link_to "Home", current_user, class: "btn btn-large" %>
     </div>
-</div>

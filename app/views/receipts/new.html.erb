@@ -10,12 +10,12 @@
           <div class="alert alert-dismissable alert-danger">
               <button type="button" class="close" data-dismiss="alert">×</button>
               <h2><%= pluralize(@receipt.errors.count, "error") %> prohibited this receipt from being saved:</h2>
-          </div>
             <ul>
             <% @receipt.errors.full_messages.each do |msg| %>
               <li><%= msg %></li>
             <% end %>
             </ul>
+          </div>
         <% end %>
   	  <p id="notice"><%= notice %></p>
         <div class="col-md-4"> 
@@ -39,7 +39,7 @@
             <%= f.submit :class => "btn btn-large btn-success" %>
       	</div>
       	<div class="col-md-9">
-      	            <%= link_to "Cancel", purchaseorder_path(:id => @purchaseorder_item.purchaseorder_id), type: "button" ,class: "btn btn-large btn-default" %> 
+      	            <%= link_to "Cancel", purchaseorder_path, :id => @purchaseorder_item.purchaseorder_id, type: "button" ,class: "btn btn-large btn-default" %> 
        <% end %>
       </div>
                   

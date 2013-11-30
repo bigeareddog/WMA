@@ -1,20 +1,9 @@
 <script>
 $(document).ready( function () {
-  $('#example').dataTable( {
-    "sDom": "<'row-fluid'<'span6'T><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
-      "oTableTools": {
-        "aButtons": [
-          "copy",
-            "print",
-            {
-              "sExtends":    "collection",
-              "sButtonText": 'Save <span class="caret" />',
-              "aButtons":    [ "csv", "xls", "pdf" ]
-            }
-         ]
-       }
-     } );
- } );
+$('#purchaseorders').dataTable({
+  "sPaginationType": "bootstrap"
+
+});
 
 
 </script>
@@ -55,8 +44,8 @@ $(document).ready( function () {
         <td><%= link_to 'Receipt', purchaseorder,class: "btn btn-success btn-sm"  %></td>
         <td><%= link_to 'Display', purchaseorder,class: "btn btn-primary btn-sm"  %></td>
       </tr>
-    <tbody>
     <% end %>
+    <tbody>
   </table>
 
       <br />
