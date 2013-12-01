@@ -4,7 +4,9 @@ NotForProfit::Application.routes.draw do
 
   resources :purchaseorder_items
 
-  resources :purchaseorders
+  resources :purchaseorders do
+    resources :purchaseorder_items
+  end  
 
   resources :purchaseorders do
     member do 
@@ -12,7 +14,7 @@ NotForProfit::Application.routes.draw do
     end
   end
 
-  resources :purchaseorders do
+  resources :purchaseorder_items do
     resources :receipts
   end
 

@@ -26,16 +26,19 @@ class ReceiptsController < ApplicationController
   # GET /receipts/new
   # GET /receipts/new.json
   def new
+    @purchaseorder_item = PurchaseorderItem.find_by_id(params[:purchaseorder_item_id])
     @receipt = Receipt.new
-    @purchaseorder_item = PurchaseorderItem.find(params[:purchaseorder_item_id])
     @receipt.po_no = @purchaseorder_item.po_no
-    #@receipt.po_item_no = @purchaseorder_item.po_item_no
+    @receipt.po_item = @purchaseorder_item.po_item_no
     @receipt.purchaseorder_item_id = @purchaseorder_item.id
-    #@receipt.stock_code = @purchaseorder_item_id.preq_stock_code
+    @receipt.stock_code = @purchaseorder_item.preq_stock_code
     @receipt.description = @purchaseorder_item.stock_code_description
     @receipt.part_no = @purchaseorder_item.part_no
 
     respond_to do |format|
+      #@purchaseorder_item_id = params[:purchaseorder_item_id][:purchaseorder_item_id]
+      #@purchaseorder_item = PurchaseorderItem.find_by_id(@purchaseorder_item_id)
+
       format.html # new.html.erb
       format.json { render json: @receipt }
     end
@@ -52,16 +55,32 @@ class ReceiptsController < ApplicationController
 
     @receipt = Receipt.new(params[:receipt])
     #@purchaseorder_item = PurchaseorderItem.find(@receipt.purchaseorder_item_id)
+    #if @receipt.save
+    #  redirect_to @receipt, notice: "Created"
+    #else
+    #  @purchaseorder_item = PurchaseorderItem.find(params[:purchaseorder_item_id])
+    #  render :new
+    #end    
 
     respond_to do |format|
       if @receipt.save
-        format.html { redirect_to @receipt, notice: 'Receipt was successfully created.' }
-        format.json { render json: @receipt, status: :created, location: @receipt }
+        #logger.info 'params[:purchaseorder_item_id]'
+        #logger.info @receipt.purchaseorder_item_id
+        @purchaseorder_item = PurchaseorderItem.find_by_id(@receipt.purchaseorder_item_id)
+        @purchaseorder = Purchaseorder.find_by_id(@purchaseorder_item.purchaseorder_id)
+        #logger.info @purchaseorder.id
+        #redirect_to :controller => 'purchaseorder', :action => 'show', :id => @purchaseorder.id
+        format.html {  redirect_to purchaseorder_path(:id => @purchaseorder.id),notice: 'Receipt was successfully created.' }
+        #format.html { redirect_to @purchaseorder, notice: 'Receipt was successfully created.' }
+        #format.json { render json: @receipt, status: :created, location: @receipt }
       else
+        logger.info 'Create Fails - params[:purchaseorder_item_id]'
+        logger.info @receipt.purchaseorder_item_id
+        @purchaseorder_item = PurchaseorderItem.find_by_id( @receipt.purchaseorder_item_id)
         format.html { render action: "new" }
         format.json { render json: @receipt.errors, status: :unprocessable_entity }
       end
-    end
+    end 
   end
 
   # PUT /receipts/1
@@ -80,7 +99,7 @@ class ReceiptsController < ApplicationController
     end
   end
 
-  # DELETE /receipts/1
+  # DELETE /receipts/1\
   # DELETE /receipts/1.json
   def destroy
     @receipt = Receipt.find(params[:id])

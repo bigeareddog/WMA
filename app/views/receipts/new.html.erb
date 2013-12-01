@@ -19,9 +19,13 @@
         <% end %>
   	  <p id="notice"><%= notice %></p>
         <div class="col-md-4"> 
+            <%= f.label :purchaseorder_item_id %><br />
+            <%= f.text_field :purchaseorder_item_id, :class => "form-control", id: "inputDefault"  %>
+        </div>
+        <div class="col-md-4"> 
             <%= f.label :receipt_ref %><br />
             <%= f.text_field :receipt_ref, :class => "form-control", id: "inputDefault"  %>
-          </div>
+        </div>
         <div class="col-md-4"> 
           <%= f.label :bin_location %><br />
           <%= f.text_field :bin_location,:class => "form-control", id: "inputDefault"  %>
@@ -38,8 +42,7 @@
         <div class="col-md-9">
             <%= f.submit :class => "btn btn-large btn-success" %>
       	</div>
-      	<div class="col-md-9">
-      	            <%= link_to "Cancel", purchaseorder_path, :id => @purchaseorder_item.purchaseorder_id, type: "button" ,class: "btn btn-large btn-default" %> 
+
        <% end %>
       </div>
                   
@@ -58,6 +61,10 @@
         <div class="col-md-4"> 
           <b>Item No:</b>
           <%= @purchaseorder_item.po_item_no %>
+        </div>
+        <div class="col-md-4"> 
+          <b>Item No:</b>
+          <%= @purchaseorder_item.purchaseorder_id %>
         </div>
         <div class="col-md-4"> 
           <b>Stock Code: </b>
