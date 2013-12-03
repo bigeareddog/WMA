@@ -39,6 +39,11 @@
           <%= f.number_field :ReceiptQty, :class => "form-control", id: "inputDefault"  %>
         </div>
 
+        <div class="col-md-4"> 
+          <%= f.label :po_no %><br />
+          <%= f.text_field :po_no, :class => "form-control", id: "inputDefault"  %>
+        </div>
+
         <div class="col-md-9">
             <%= f.submit :class => "btn btn-large btn-success" %>
       	</div>

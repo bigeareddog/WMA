@@ -15,8 +15,6 @@ class ReceiptsController < ApplicationController
   def show
 
     @receipt = Receipt.find(params[:id])
-    #@purchaseorder_item = PurchaseorderItem.find(params[:purchaseorder_item_id])
-    #@purchaseorder = Purchaseorder.find(params[:purchaseorder_item_id])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @receipt }
@@ -36,9 +34,6 @@ class ReceiptsController < ApplicationController
     @receipt.part_no = @purchaseorder_item.part_no
 
     respond_to do |format|
-      #@purchaseorder_item_id = params[:purchaseorder_item_id][:purchaseorder_item_id]
-      #@purchaseorder_item = PurchaseorderItem.find_by_id(@purchaseorder_item_id)
-
       format.html # new.html.erb
       format.json { render json: @receipt }
     end
@@ -52,24 +47,15 @@ class ReceiptsController < ApplicationController
   # POST /receipts
   # POST /receipts.json
   def create
-
+    logger.info '***Create  - params[:purchaseorder_item_id]'
+    logger.info '***Create  - params[:purchaseorder_item_id]'
+    @purchaseorder_item = PurchaseorderItem.find_by_id(params[:purchaseorder_item_id])
     @receipt = Receipt.new(params[:receipt])
-    #@purchaseorder_item = PurchaseorderItem.find(@receipt.purchaseorder_item_id)
-    #if @receipt.save
-    #  redirect_to @receipt, notice: "Created"
-    #else
-    #  @purchaseorder_item = PurchaseorderItem.find(params[:purchaseorder_item_id])
-    #  render :new
-    #end    
 
     respond_to do |format|
       if @receipt.save
-        #logger.info 'params[:purchaseorder_item_id]'
-        #logger.info @receipt.purchaseorder_item_id
         @purchaseorder_item = PurchaseorderItem.find_by_id(@receipt.purchaseorder_item_id)
         @purchaseorder = Purchaseorder.find_by_id(@purchaseorder_item.purchaseorder_id)
-        #logger.info @purchaseorder.id
-        #redirect_to :controller => 'purchaseorder', :action => 'show', :id => @purchaseorder.id
         format.html {  redirect_to purchaseorder_path(:id => @purchaseorder.id),notice: 'Receipt was successfully created.' }
         #format.html { redirect_to @purchaseorder, notice: 'Receipt was successfully created.' }
         #format.json { render json: @receipt, status: :created, location: @receipt }

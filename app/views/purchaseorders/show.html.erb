@@ -3,7 +3,10 @@ $('#purchaseorderitems').dataTable({
   "sPaginationType": "bootstrap"
 
 });
+
 </script>
+    
+
 <div class = "container">
     <div class="row">
       <div class="col-md-6 center">
@@ -13,11 +16,9 @@ $('#purchaseorderitems').dataTable({
           <p class="lead">Review and receipt outstanding Purchase Orders linked to a Consignment Note</p>
       </div>
   </div>
-
   <div class="panel panel-info">
     <div class="panel-heading">
       <h3 class="panel-title">Purchase Order Details</h3>
-  
     <div class="panel-body">
       <div class="col-md-4">
         <b>Po no:</b>
@@ -74,7 +75,7 @@ $('#purchaseorderitems').dataTable({
         <tr>
           <td><%= purchaseorder_item.po_item_no %></td>
           <td><%= purchaseorder_item.preq_stock_code %></td> 
-          <td><%= purchaseorder_item.stock_code_description %></td>             
+          <td><%= purchaseorder_item.stock_code_description[0,30] %></td>             
           <td><%= purchaseorder_item.part_no%></td>
           <td><%= purchaseorder_item.unit_of_purch %></td>
           <td><%= purchaseorder_item.curr_qty %></td>
@@ -83,12 +84,16 @@ $('#purchaseorderitems').dataTable({
           <td></td>
           <td></td>
           <td><%=link_to "Receipt", new_receipt_path(:purchaseorder_item_id => purchaseorder_item.id), class: "btn btn-success btn-sm" %></td> 
-          <td><%= link_to 'Detail', purchaseorder_item,class: "btn btn-primary btn-sm"  %></td>
+          <td>
+            <%= link_to 'Detail', purchaseorder_item,class: "btn btn-primary btn-sm"  %>
+          </td>
         </tr>
        <% end %>
       </tbody>
      </table>
     </div>
   </div>
+
+
   <%= link_to 'Home', manifests_path %>
 </div>
